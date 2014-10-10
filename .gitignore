@@ -1,0 +1,41 @@
+# Dot Files / Folders
+.*
+!.git*
+!.hg*
+!.htaccess
+!.project
+!.buildpath
+.*/
+!.gitencrypt/
+
+# Crap Files
+Thumbs.db
+
+# Variable Files
+*.log
+*_log.*
+logs/
+log/
+
+# Archives
+*.tar
+*.gz
+*.tgz
+*.zip
+*.lzh
+*.lha
+*.cab
+
+# Backup Files
+*.bak
+*.bcp
+*.org
+*.sql
+
+# Smarty
+templates_c/
+templates_c_*/
+
+# Composer
+/vendor/
+composer.lock

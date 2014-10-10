@@ -1,0 +1,17 @@
+{
+	"name" : "amekusa/Kniphe",
+	"version" : "0.1.0",
+	"authors" : [{
+			"name" : "amekusa",
+			"email" : "post@amekusa.com"
+		}
+	],
+	"require" : {
+		"php" : ">=5.3.3"
+	},
+	"autoload" : {
+		"psr-4" : {
+			"amekusa\\Kniphe\\" : "src/"
+		}
+	}
+}
