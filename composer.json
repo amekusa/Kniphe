@@ -14,7 +14,7 @@
 			"amekusa\\Kniphe\\" : "src/"
 		},
 		"files" : [
-			"src/init.php"
+			"src/main.php"
 		]
 	}
 }
