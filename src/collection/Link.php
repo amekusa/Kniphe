@@ -1,8 +1,10 @@
 <?php
 namespace amekusa\Kniphe\collection;
 
-use amekusa\Kniphe as Kn;
-
 abstract class Link {
+	protected $to; // <Linkable>
 	
+	public function __construct(Linkable $xTo) {
+		$this->to = $xTo;
+	}
 }

@@ -11,25 +11,22 @@ interface functions {
 }
 
 /**
- * <p lang="ja">
- * 任意の PHP ディレクティブが任意の値になっているかを確認します。
- * 任意の値になっていない、あるいは null なら、ini_set() 関数で値を変更します。
- * 変更に失敗した場合はエラーを発生させます。
- * </p>
- * 
- * @param string $xName The name of PHP directive
- * @param mixed $xValue The value of PHP directive
+ * Verify whether a specific PHP directive has a specific value.
+ *
+ * @param string $xName Name of PHP directive
+ * @param mixed $xValue Value of PHP directive
  */
 function verify_ini($xName, $xValue) {
-	$x = init_get($xName);
-	if ($x === false) new Exception('No such PHP directive: "' . $xName . '".');
+	$x = ini_get($xName);
+	if ($x === false) new \Exception("No such directive:$xName");
 	if ($x !== '' && $x === $xValue) return;
-	if (ini_set($xName, $xValue) === false) new Exception('The value of the PHP directive: "' . $xName . '" must be "' . $xValue . '". The actual value is "' . ini_get($xName) . '".');
+	if (ini_set($xName, $xValue) === false) new \Exception("Value of the directive:$xName must be $xValue");
 }
 
 /**
- * <p lang="ja">指定された値の型を文字列として返します。値がオブジェクトの場合はそのクラス名を返します。</p>
- * 
+ * Returns the type of a specific value.
+ * If the value is object, returns the class name of the object.
+ *
  * @param mixed $xValue
  * @return string
  */
@@ -45,14 +42,10 @@ function type($xValue) {
 }
 
 /**
- * Returns whether the type of $xValue matches $xType or not.
- * <p lang="ja">
- * $xValue の型が $xType とマッチするか否かを判定します。
- * $xType がクラス名なら、$xValue instanceof $xType の比較結果を返します。
- * </p>
- * 
- * @param unknown $xValue
- * @param unknown $xType
+ * Returns whether the type of a specific value matches a specific type or not.
+ *
+ * @param mixed $xValue
+ * @param string $xType
  * @return boolean
  */
 function type_matches($xValue, $xType) {
@@ -79,7 +72,7 @@ function type_matches($xValue, $xType) {
 	return $xType === gettype($xValue);
 }
 
-function is_array_like($xValue) {
+function array_like($xValue) {
 	if (is_array($xValue)) return true;
 	if (is_object($xValue)) {
 		if ($xValue instanceof \ArrayAccess) return true;
@@ -87,7 +80,7 @@ function is_array_like($xValue) {
 	return false;
 }
 
-function is_iterable($xValue) {
+function iterable($xValue) {
 	if (is_array($xValue)) return true;
 	if (is_object($xValue)) {
 		if ($xValue instanceof \Traversable) return true;
@@ -144,28 +137,45 @@ function empty_safe($xVar, $xAltValue) {
  * @param bool $xDefines
  * @return mixed
  */
-function undfn_safe($xConstant, $xAltValue = null, $xDefines = false) {
+function undef_safe($xConstant, $xAltValue = null, $xDefines = false) {
 	if (defined($xConstant)) return constant($xConstant);
 	if ($xDefines) define($xConstant, $xAltValue);
 	return $xAltValue;
 }
 
 /**
- * Alias of {@link undfn_safe()}
+ * Alias of {@link undef_safe()}
  */
 function undefined_safe($xConstant, $xAltValue = null, $xDefines = false) {
-	return undfn_safe($xConstant, $xAltValue, $xDefines);
+	return undef_safe($xConstant, $xAltValue, $xDefines);
+}
+
+function first($xArray) {
+	return _first($xArray);
+}
+
+function _first(&$xArray) {
+	if (empty($xArray)) return null;
+	$r = reset($xArray);
+	return $r;
+}
+
+function last($xArray) {
+	return _last($xArray);
+}
+
+function _last(&$xArray) {
+	if (empty($xArray)) return null;
+	$r = end($xArray);
+	reset($xArray);
+	return $r;
 }
 
 /**
  * If the array:$xArray has the key:$xKey, $xArray[$xKey] is returned.
  * Otherwise $xAltValue is returned.
- * <p lang="ja">
- * 配列:$xArray がキー:$xKey を保持している場合はそのキーに対応する値を返します。
- * 保持していない場合は $xAltValue を返します。
- * </p>
- * 
- * @param mixed[] $xArray
+ *
+ * @param array $xArray
  * @param integer|string $xKey
  * @param mixed $xAltValue
  * @return see the description
@@ -173,6 +183,16 @@ function undefined_safe($xConstant, $xAltValue = null, $xDefines = false) {
 function enter_array(&$xArray, $xKey, $xAltValue = null) {
 	if (empty($xArray)) return $xAltValue;
 	return array_key_exists($xKey, $xArray) ? $xArray[$xKey] : $xAltValue;
+}
+
+function empty_safe_push($xElm, &$xArray) {
+	if (empty($xElm)) return;
+	$xArray[] = $xElm;
+}
+
+function null_safe_push($xElm, &$xArray) {
+	if (is_null($xElm)) return;
+	$xArray[] = $xElm;
 }
 
 function arrays_are_equal(array $xArrayX, array $xArrayY) {
@@ -220,10 +240,14 @@ function get($xName, $xFrom, $xAltValue = null) {
 		if (is_callable($x)) return call_user_func($x);
 		else $vars = get_object_vars($xFrom);
 	
-	} else if (is_array_like($xFrom)) $vars = $xFrom;
+	} else if (array_like($xFrom)) $vars = $xFrom;
 	else return $xAltValue;
 	
 	return enter_array($vars, $xName, $xAltValue);
+}
+
+function string_is_nonsense($xString){
+	return !$xString || ctype_space($xString);
 }
 
 function string_is_mb($xString) {
@@ -312,41 +336,7 @@ function handle_error($xErrorNo, $xErrorMsg, $xErroredFile, $xErroredLine) { // 
 		//handle_exception(new CriticalErrorException($xErrorMsg, 0, $xErrorNo, $xErroredFile, $xErroredLine));
 		//throw new CriticalErrorException($xErrorMsg, 0, $xErrorNo, $xErroredFile, $xErroredLine));
 	}
-	throw new ErrorException($xErrorMsg, 0, $xErrorNo, $xErroredFile, $xErroredLine);
-}
-
-function handle_exception($xException) {
-	try {
-		echo 'Handling exception'; // TESTCODE
-		if ($xException instanceof ResumableException) {
-			if (!$xException->forcesTerminate()) return;
-			// Resumes the program
-		}
-		
-		put_runtime_log('The uncaught exception: ' . express(get_class($xException)) . ' occured with the message: ' . express($xException->getMessage()));
-		if ($xException instanceof Detailable) put_runtime_log($xException->getDetail());
-		
-		if (context()->get('TEST_MODE')) {
-			show_runtime_log();
-			exit();
-		}
-		
-		// UNTESTED プロダクトモードで例外が発生した場合はキャッシュされた静的なページを表示
-		$cache = FILE_ENTRY . '.cache';
-		if (file_exists($cache)) {
-			put_warning_msg('申し訳ございません。最新のページの取得に失敗しました。<br />現在、' . date('c', filemtime($cache)) . 'に保存（キャッシュ）された静的なページを表示しています。');
-			/*
-			 * ALTER 警告文はキャッシュファイルに付加しないと意味無し
-			 */
-			ob_end_clean();
-			echo file_get_contents($cache);
-			exit();
-		} else
-			header('HTTP/1.0 500 Internal Server Error');
-	
-	} catch (Exception $e) {
-		exit('The exception: ' . express(get_class($e)) . ' occured while handling the another exception: ' . express(get_class($xException)));
-	}
+	throw new \ErrorException($xErrorMsg, 0, $xErrorNo, $xErroredFile, $xErroredLine);
 }
 
 function buf($xCallback = null, $xForcesPush = false) {
