@@ -15,6 +15,7 @@ Thumbs.db
 *_log.*
 logs/
 log/
+phpdoc-cache-*
 
 # Archives
 *.tar
