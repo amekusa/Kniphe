@@ -38,3 +38,4 @@ templates_c_*/
 # Composer
 /vendor/
 composer.lock
+composer.phar
