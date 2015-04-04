@@ -3,7 +3,6 @@
 !.git*
 !.hg*
 !.htaccess
-!.project
 !.buildpath
 .*/
 !.gitencrypt/
