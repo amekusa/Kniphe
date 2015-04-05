@@ -1,0 +1,2302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project title="Kniphe" version="2.8.2">
+  <partials/>
+  <file path="collection/CompositeNode.php" generated-path="collection.CompositeNode.html" hash="578df5e99d030f8f8075318ea7a411d8" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="amekusa\Kniphe\collection" line="4" package="Default">
+      <extends>\amekusa\Kniphe\collection\Node</extends>
+      <name>CompositeNode</name>
+      <full_name>\amekusa\Kniphe\collection\CompositeNode</full_name>
+      <docblock line="4">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="4" description="Default"/>
+        <tag name="inherited_from" description="\amekusa\Kniphe\collection\Node" refers="\amekusa\Kniphe\collection\Node" link="/classes/amekusa.Kniphe.collection.Node.html"/>
+      </docblock>
+      <property static="false" visibility="protected" namespace="amekusa\Kniphe\collection" line="5" package="Default">
+        <name>$port</name>
+        <full_name>\amekusa\Kniphe\collection\Node::port</full_name>
+        <default></default>
+        <docblock line="5">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="amekusa\Kniphe\collection" line="6" package="Default">
+        <name>isParentOf</name>
+        <full_name>\amekusa\Kniphe\collection\CompositeNode::isParentOf()</full_name>
+        <docblock line="6">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$xNode</name>
+          <default></default>
+          <type>\amekusa\Kniphe\collection\CompositeNode</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="amekusa\Kniphe\collection" line="9" package="Default">
+        <name>isChildOf</name>
+        <full_name>\amekusa\Kniphe\collection\CompositeNode::isChildOf()</full_name>
+        <docblock line="9">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$xNode</name>
+          <default></default>
+          <type>\amekusa\Kniphe\collection\CompositeNode</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="amekusa\Kniphe\collection" line="12" package="Default">
+        <name>hasParent</name>
+        <full_name>\amekusa\Kniphe\collection\CompositeNode::hasParent()</full_name>
+        <docblock line="12">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="amekusa\Kniphe\collection" line="15" package="Default">
+        <name>hasChildren</name>
+        <full_name>\amekusa\Kniphe\collection\CompositeNode::hasChildren()</full_name>
+        <docblock line="15">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="amekusa\Kniphe\collection" line="18" package="Default">
+        <name>getParent</name>
+        <full_name>\amekusa\Kniphe\collection\CompositeNode::getParent()</full_name>
+        <docblock line="18">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="amekusa\Kniphe\collection" line="21" package="Default">
+        <name>getChild</name>
+        <full_name>\amekusa\Kniphe\collection\CompositeNode::getChild()</full_name>
+        <docblock line="21">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$xIndex</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="amekusa\Kniphe\collection" line="24" package="Default">
+        <name>setParent</name>
+        <full_name>\amekusa\Kniphe\collection\CompositeNode::setParent()</full_name>
+        <docblock line="24">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$xNewParent</name>
+          <default></default>
+          <type>\amekusa\Kniphe\collection\CompositeNode</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="amekusa\Kniphe\collection" line="27" package="Default">
+        <name>addChild</name>
+        <full_name>\amekusa\Kniphe\collection\CompositeNode::addChild()</full_name>
+        <docblock line="27">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$xNewChild</name>
+          <default></default>
+          <type>\amekusa\Kniphe\collection\CompositeNode</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$xIndex</name>
+          <default>null</default>
+          <type/>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$xOverwrites</name>
+          <default>false</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="amekusa\Kniphe\collection" line="7" package="Default">
+        <name>__construct</name>
+        <full_name>\amekusa\Kniphe\collection\Node::__construct()</full_name>
+        <docblock line="7">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+        <inherited_from>\amekusa\Kniphe\collection\Node</inherited_from>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="4" code="PPC:ERR-50005">No summary for class \amekusa\Kniphe\collection\CompositeNode</error>
+      <error line="6" code="PPC:ERR-50015">Argument $xNode is missing from the Docblock of isParentOf</error>
+      <error line="6" code="PPC:ERR-50008">No summary for method isParentOf()</error>
+      <error line="9" code="PPC:ERR-50015">Argument $xNode is missing from the Docblock of isChildOf</error>
+      <error line="9" code="PPC:ERR-50008">No summary for method isChildOf()</error>
+      <error line="12" code="PPC:ERR-50008">No summary for method hasParent()</error>
+      <error line="15" code="PPC:ERR-50008">No summary for method hasChildren()</error>
+      <error line="18" code="PPC:ERR-50008">No summary for method getParent()</error>
+      <error line="21" code="PPC:ERR-50015">Argument $xIndex is missing from the Docblock of getChild</error>
+      <error line="21" code="PPC:ERR-50008">No summary for method getChild()</error>
+      <error line="24" code="PPC:ERR-50015">Argument $xNewParent is missing from the Docblock of setParent</error>
+      <error line="24" code="PPC:ERR-50008">No summary for method setParent()</error>
+      <error line="27" code="PPC:ERR-50015">Argument $xNewChild is missing from the Docblock of addChild</error>
+      <error line="27" code="PPC:ERR-50015">Argument $xIndex is missing from the Docblock of addChild</error>
+      <error line="27" code="PPC:ERR-50015">Argument $xOverwrites is missing from the Docblock of addChild</error>
+      <error line="27" code="PPC:ERR-50008">No summary for method addChild()</error>
+    </parse_markers>
+    <source>eJyVkttKxDAQhq/bpxiWgl3QJ1gPyOqFCK543ZuYTE0wTUIOtiB9d5N0sSu7Vrxqk3zfP5NpL28MN6UiHTpDKEJ8eQ+ONI9KGI4N1VIi9UKrTVlSSZyDre6MdsLjk2YIOHhUzEFefJZFWZjwKgWFNqjsgXDPxKLyu7b+qVZDeqyTNZ4Wt1xI9m+Pk33FepHJ4RFboN7Q/5kUmZxUV8ODYjgckFb7ODtkM+y+A4+uhP108nslwthU6YSbD85h3wNcgQpSpvXuA21vI+viZkukmwZXiBbq2by4PhjaBBwR8+eoPBcuYp5b3YPCHpqXoLzo8H6gaFKz9SrDcBdMvANJW6v1JsVibGHZvFXac7Qw9XMW/7gUNeljms34BVo+6AY=</source>
+  </file>
+  <file path="collection/DoublyLink.php" generated-path="collection.DoublyLink.html" hash="25de602cf91e20ef2b23eddd5557e252" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="amekusa\Kniphe\collection" line="4" package="Default">
+      <extends>\amekusa\Kniphe\collection\Link</extends>
+      <name>DoublyLink</name>
+      <full_name>\amekusa\Kniphe\collection\DoublyLink</full_name>
+      <docblock line="4">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="4" description="Default"/>
+        <tag name="inherited_from" description="\amekusa\Kniphe\collection\Link" refers="\amekusa\Kniphe\collection\Link" link="/classes/amekusa.Kniphe.collection.Link.html"/>
+      </docblock>
+      <property static="false" visibility="protected" namespace="amekusa\Kniphe\collection" line="5" package="Default">
+        <name>$from</name>
+        <full_name>\amekusa\Kniphe\collection\DoublyLink::from</full_name>
+        <default></default>
+        <docblock line="5">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" namespace="amekusa\Kniphe\collection" line="5" package="Default">
+        <name>$to</name>
+        <full_name>\amekusa\Kniphe\collection\Link::to</full_name>
+        <default></default>
+        <docblock line="5">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="amekusa\Kniphe\collection" line="7" package="Default">
+        <name>__construct</name>
+        <full_name>\amekusa\Kniphe\collection\Link::__construct()</full_name>
+        <docblock line="7">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$xTo</name>
+          <default></default>
+          <type>\amekusa\Kniphe\collection\Linkable</type>
+        </argument>
+        <inherited_from>\amekusa\Kniphe\collection\Link</inherited_from>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="4" code="PPC:ERR-50005">No summary for class \amekusa\Kniphe\collection\DoublyLink</error>
+      <error line="5" code="PPC:ERR-50007">No summary for property $from</error>
+    </parse_markers>
+    <source>eJwdykEOQEAMQNG1nqILtyBs7DiCzZipmBhtoyMh4u7E7r/k160uCuw2MnWe8Iv1MDf2HHWh0UtK5HMUrgB8cmbYyTGla4i8Ip2ZOBj+uKHQXfJ3U8By3mWr4IG2eQHxsCLJ</source>
+  </file>
+  <file path="collection/HierarchicalLink.php" generated-path="collection.HierarchicalLink.html" hash="b44b844402f64813e704bb91924038f3" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <namespace-alias name="Kn">\amekusa\Kniphe</namespace-alias>
+    <class final="false" abstract="false" namespace="amekusa\Kniphe\collection" line="6" package="Default">
+      <extends>\amekusa\Kniphe\collection\Link</extends>
+      <name>Hierarchy</name>
+      <full_name>\amekusa\Kniphe\collection\Hierarchy</full_name>
+      <docblock line="6">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="6" description="Default"/>
+        <tag name="inherited_from" description="\amekusa\Kniphe\collection\Link" refers="\amekusa\Kniphe\collection\Link" link="/classes/amekusa.Kniphe.collection.Link.html"/>
+      </docblock>
+      <property static="false" visibility="protected" namespace="amekusa\Kniphe\collection" line="7" package="Default">
+        <name>$parent</name>
+        <full_name>\amekusa\Kniphe\collection\Hierarchy::parent</full_name>
+        <default></default>
+        <docblock line="7">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" namespace="amekusa\Kniphe\collection" line="8" package="Default">
+        <name>$children</name>
+        <full_name>\amekusa\Kniphe\collection\Hierarchy::children</full_name>
+        <default></default>
+        <docblock line="8">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" namespace="amekusa\Kniphe\collection" line="5" package="Default">
+        <name>$to</name>
+        <full_name>\amekusa\Kniphe\collection\Link::to</full_name>
+        <default></default>
+        <docblock line="5">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="amekusa\Kniphe\collection" line="7" package="Default">
+        <name>__construct</name>
+        <full_name>\amekusa\Kniphe\collection\Link::__construct()</full_name>
+        <docblock line="7">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$xTo</name>
+          <default></default>
+          <type>\amekusa\Kniphe\collection\Linkable</type>
+        </argument>
+        <inherited_from>\amekusa\Kniphe\collection\Link</inherited_from>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="6" code="PPC:ERR-50005">No summary for class \amekusa\Kniphe\collection\Hierarchy</error>
+      <error line="7" code="PPC:ERR-50007">No summary for property $parent</error>
+      <error line="8" code="PPC:ERR-50007">No summary for property $children</error>
+    </parse_markers>
+    <source>eJxdjDEKwzAMRefqFBp6ixS6FpIjZBGywCKOLCwHWkrvHnds+cvjPfi3u2cHo13CiQUHbEfQOpt6lpVrKcJdq00AR/x3pMD5m7hQBD5UGjXOL5RnF0uBi9qGb7h4q338SMKrUxPr04/jrCUNPezYB07ndjO6</source>
+  </file>
+  <file path="collection/Hierarchy.php" generated-path="collection.Hierarchy.html" hash="fbe5a40e24607229dc3fce937d4a0eff" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <namespace-alias name="Kn">\amekusa\Kniphe</namespace-alias>
+    <class final="false" abstract="false" namespace="amekusa\Kniphe\collection" line="6" package="Default">
+      <extends>\amekusa\Kniphe\collection\Link</extends>
+      <name>Hierarchy</name>
+      <full_name>\amekusa\Kniphe\collection\Hierarchy</full_name>
+      <docblock line="6">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="6" description="Default"/>
+        <tag name="inherited_from" description="\amekusa\Kniphe\collection\Link" refers="\amekusa\Kniphe\collection\Link" link="/classes/amekusa.Kniphe.collection.Link.html"/>
+      </docblock>
+      <property static="false" visibility="protected" namespace="amekusa\Kniphe\collection" line="7" package="Default">
+        <name>$parent</name>
+        <full_name>\amekusa\Kniphe\collection\Hierarchy::parent</full_name>
+        <default></default>
+        <docblock line="7">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" namespace="amekusa\Kniphe\collection" line="8" package="Default">
+        <name>$children</name>
+        <full_name>\amekusa\Kniphe\collection\Hierarchy::children</full_name>
+        <default>array()</default>
+        <docblock line="8">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" namespace="amekusa\Kniphe\collection" line="9" package="Default">
+        <name>$gen</name>
+        <full_name>\amekusa\Kniphe\collection\Hierarchy::gen</full_name>
+        <default>0</default>
+        <docblock line="9">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" namespace="amekusa\Kniphe\collection" line="5" package="Default">
+        <name>$to</name>
+        <full_name>\amekusa\Kniphe\collection\Link::to</full_name>
+        <default></default>
+        <docblock line="5">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="amekusa\Kniphe\collection" line="11" package="Default">
+        <name>__construct</name>
+        <full_name>\amekusa\Kniphe\collection\Hierarchy::__construct()</full_name>
+        <docblock line="11">
+          <description></description>
+          <long-description></long-description>
+          <tag name="inherited_from" description="\amekusa\Kniphe\collection\Link::__construct()" refers="\amekusa\Kniphe\collection\Link::__construct()" link="/classes/amekusa.Kniphe.collection.Link.html#method___construct"/>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$xFrom</name>
+          <default></default>
+          <type>\amekusa\Kniphe\collection\Linkable</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="amekusa\Kniphe\collection" line="15" package="Default">
+        <name>getParent</name>
+        <full_name>\amekusa\Kniphe\collection\Hierarchy::getParent()</full_name>
+        <docblock line="15">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="amekusa\Kniphe\collection" line="19" package="Default">
+        <name>getChildren</name>
+        <full_name>\amekusa\Kniphe\collection\Hierarchy::getChildren()</full_name>
+        <docblock line="19">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="amekusa\Kniphe\collection" line="23" package="Default">
+        <name>setParent</name>
+        <full_name>\amekusa\Kniphe\collection\Hierarchy::setParent()</full_name>
+        <docblock line="23">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$xParent</name>
+          <default></default>
+          <type>\amekusa\Kniphe\collection\Linkable</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="amekusa\Kniphe\collection" line="27" package="Default">
+        <name>addChild</name>
+        <full_name>\amekusa\Kniphe\collection\Hierarchy::addChild()</full_name>
+        <docblock line="27">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$xChild</name>
+          <default></default>
+          <type>\amekusa\Kniphe\collection\Linkable</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="amekusa\Kniphe\collection" line="7" package="Default">
+        <name>__construct</name>
+        <full_name>\amekusa\Kniphe\collection\Link::__construct()</full_name>
+        <docblock line="7">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$xTo</name>
+          <default></default>
+          <type>\amekusa\Kniphe\collection\Linkable</type>
+        </argument>
+        <inherited_from>\amekusa\Kniphe\collection\Link</inherited_from>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="6" code="PPC:ERR-50005">No summary for class \amekusa\Kniphe\collection\Hierarchy</error>
+      <error line="11" code="PPC:ERR-50015">Argument $xFrom is missing from the Docblock of __construct</error>
+      <error line="11" code="PPC:ERR-50008">No summary for method __construct()</error>
+      <error line="15" code="PPC:ERR-50008">No summary for method getParent()</error>
+      <error line="19" code="PPC:ERR-50008">No summary for method getChildren()</error>
+      <error line="23" code="PPC:ERR-50015">Argument $xParent is missing from the Docblock of setParent</error>
+      <error line="23" code="PPC:ERR-50008">No summary for method setParent()</error>
+      <error line="27" code="PPC:ERR-50015">Argument $xChild is missing from the Docblock of addChild</error>
+      <error line="27" code="PPC:ERR-50008">No summary for method addChild()</error>
+      <error line="7" code="PPC:ERR-50007">No summary for property $parent</error>
+      <error line="8" code="PPC:ERR-50007">No summary for property $children</error>
+      <error line="9" code="PPC:ERR-50007">No summary for property $gen</error>
+    </parse_markers>
+    <source>eJx1kD9vwjAQxWf8KW7IEIYKZkLDgFRVgqF7qdDhXLGFcSz/kUAV372Ok1RJRTbr3rvfvef1xgjDNF7JGeQE8XEJDg87LY2gA6+VIu5lrQvGgvuvAzrYNRJX6By8S7JoubgD3TzpysFe6gv8sJmxtY8cqiAzaEn7AhYLWDcynhSVIwcXUlXRBK+A1uId8nkxMpyTtozDOA4nJTl8B51iwvHIa+28DdznPR6y25utr/Mmyay9v1oNjZ0egY9nzDP5j7SVtwhLPlgNmRfSvZRdoendbdfn6XZfdmrf/d0etGknLW6UIn5Lr04BsapSoCEvDUa4PtbnV0ImQyI+GNuUv5sJusw=</source>
+  </file>
+  <file path="collection/Link.php" generated-path="collection.Link.html" hash="92184c5a32545b5de94a54f3e889c46e" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <class final="false" abstract="true" namespace="amekusa\Kniphe\collection" line="4" package="Default">
+      <extends/>
+      <name>Link</name>
+      <full_name>\amekusa\Kniphe\collection\Link</full_name>
+      <docblock line="4">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="4" description="Default"/>
+      </docblock>
+      <property static="false" visibility="protected" namespace="amekusa\Kniphe\collection" line="5" package="Default">
+        <name>$to</name>
+        <full_name>\amekusa\Kniphe\collection\Link::to</full_name>
+        <default></default>
+        <docblock line="5">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="amekusa\Kniphe\collection" line="7" package="Default">
+        <name>__construct</name>
+        <full_name>\amekusa\Kniphe\collection\Link::__construct()</full_name>
+        <docblock line="7">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$xTo</name>
+          <default></default>
+          <type>\amekusa\Kniphe\collection\Linkable</type>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="4" code="PPC:ERR-50005">No summary for class \amekusa\Kniphe\collection\Link</error>
+      <error line="7" code="PPC:ERR-50015">Argument $xTo is missing from the Docblock of __construct</error>
+      <error line="7" code="PPC:ERR-50008">No summary for method __construct()</error>
+      <error line="5" code="PPC:ERR-50007">No summary for property $to</error>
+    </parse_markers>
+    <source>eJw1jEEKgzAQRdeZU8zCRbsoHkBrD9AuXQoyTlMMpplgJlAo3r1R6O7z3+O1tzhHCPS2KRJbLGPJiYZ7cHG2A4v3ltVJaABoSroSK7KnlPDhwoJfMHEVLY59YqXSYF1juyOavO3AFJ4n7xhfORwhHEeWUEqZ9fQXsfr0ct5rptLZpUungtfjbcBssP0AbJE4Tw==</source>
+  </file>
+  <file path="collection/Linkable.php" generated-path="collection.Linkable.html" hash="47b1379f714d35b74848eacc83e89676" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <interface namespace="amekusa\Kniphe\collection" line="4" package="Default">
+      <name>Linkable</name>
+      <full_name>\amekusa\Kniphe\collection\Linkable</full_name>
+      <docblock line="4">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="4" description="Default"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="amekusa\Kniphe\collection" line="6" package="Default">
+        <name>getNode</name>
+        <full_name>\amekusa\Kniphe\collection\Linkable::getNode()</full_name>
+        <docblock line="6">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+    </interface>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="4" code="PPC:ERR-50009">No summary for interface ""</error>
+      <error line="6" code="PPC:ERR-50008">No summary for method getNode()</error>
+    </parse_markers>
+    <source>eJwdyrsRgCAMANDaTEGpM+jJAHpOQIMYJCeGnELlubuf7hWv0xIE2O54inWoXmzltGZgkoDGpRjRZUrcAhBnPPy3RuLNzhHVBRVUUuZITvnC/1Qr5iktWDct3KD7B/wCIk0=</source>
+  </file>
+  <file path="collection/Node.php" generated-path="collection.Node.html" hash="85f2d9dc7775487b2589e89bbb2ef5fc" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="amekusa\Kniphe\collection" line="4" package="Default">
+      <extends/>
+      <name>Node</name>
+      <full_name>\amekusa\Kniphe\collection\Node</full_name>
+      <docblock line="4">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="4" description="Default"/>
+      </docblock>
+      <property static="false" visibility="protected" namespace="amekusa\Kniphe\collection" line="5" package="Default">
+        <name>$port</name>
+        <full_name>\amekusa\Kniphe\collection\Node::port</full_name>
+        <default></default>
+        <docblock line="5">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="amekusa\Kniphe\collection" line="7" package="Default">
+        <name>__construct</name>
+        <full_name>\amekusa\Kniphe\collection\Node::__construct()</full_name>
+        <docblock line="7">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="4" code="PPC:ERR-50005">No summary for class \amekusa\Kniphe\collection\Node</error>
+      <error line="7" code="PPC:ERR-50008">No summary for method __construct()</error>
+      <error line="5" code="PPC:ERR-50007">No summary for property $port</error>
+    </parse_markers>
+    <source>eJwdjDsKwzAMhmfrFBoyJENPkD4OUCg9QCC4iopNXctYNhlK7l4n2//g+8635BJE+2VNlhhb+FS10z365HgiCYGpeIkjAAWrig9ZGH9gUpbSLl6wS5LLCKZt9RU84bvGg8F5JolacqXSDztkuuK8nq47gReMvB6+Z6v90BQbbH+yhzFD</source>
+  </file>
+  <file path="collection/NodePort.php" generated-path="collection.NodePort.html" hash="7158f9430dfee718af0e56b7b9bf08f5" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="amekusa\Kniphe\collection" line="4" package="Default">
+      <extends/>
+      <name>NodePort</name>
+      <full_name>\amekusa\Kniphe\collection\NodePort</full_name>
+      <docblock line="4">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="4" description="Default"/>
+      </docblock>
+    </class>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="4" code="PPC:ERR-50005">No summary for class \amekusa\Kniphe\collection\NodePort</error>
+    </parse_markers>
+    <source>eJyzsS/IKODKS8xNLS5ITE5VADKyS4sTY7zzMgsyUmOS83NyUpNLMvPzrLm4knMSi4sV/PJTUgPyi0oUqrk4uWq5ABKgFrQ=</source>
+  </file>
+  <file path="FileIOException.php" generated-path="FileIOException.html" hash="c6bd213f6619ec1e54e661039e4ca668" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="amekusa\Kniphe" line="4" package="Default">
+      <extends>\amekusa\Kniphe\IOException</extends>
+      <name>FileIOException</name>
+      <full_name>\amekusa\Kniphe\FileIOException</full_name>
+      <docblock line="4">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="4" description="Default"/>
+        <tag name="inherited_from" description="\amekusa\Kniphe\IOException" refers="\amekusa\Kniphe\IOException" link="/classes/amekusa.Kniphe.IOException.html"/>
+      </docblock>
+      <property static="false" visibility="public" namespace="amekusa\Kniphe" line="5" package="Default">
+        <name>$stream</name>
+        <full_name>\amekusa\Kniphe\IOException::stream</full_name>
+        <default>null</default>
+        <docblock line="5">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="amekusa\Kniphe" line="6" package="Default">
+        <name>_closeStream</name>
+        <full_name>\amekusa\Kniphe\FileIOException::_closeStream()</full_name>
+        <docblock line="6">
+          <description></description>
+          <long-description></long-description>
+          <tag name="inherited_from" description="\amekusa\Kniphe\IOException::_closeStream()" refers="\amekusa\Kniphe\IOException::_closeStream()" link="/classes/amekusa.Kniphe.IOException.html#method__closeStream"/>
+        </docblock>
+      </method>
+      <method final="true" abstract="false" static="false" visibility="public" namespace="amekusa\Kniphe" line="7" package="Default">
+        <name>closeStream</name>
+        <full_name>\amekusa\Kniphe\IOException::closeStream()</full_name>
+        <docblock line="7">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+        <inherited_from>\amekusa\Kniphe\IOException</inherited_from>
+      </method>
+      <method final="false" abstract="true" static="false" visibility="protected" namespace="amekusa\Kniphe" line="12" package="Default">
+        <name>_closeStream</name>
+        <full_name>\amekusa\Kniphe\IOException::_closeStream()</full_name>
+        <docblock line="12">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+        <inherited_from>\amekusa\Kniphe\IOException</inherited_from>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="4" code="PPC:ERR-50005">No summary for class \amekusa\Kniphe\FileIOException</error>
+      <error line="6" code="PPC:ERR-50008">No summary for method _closeStream()</error>
+    </parse_markers>
+    <source>eJxNirEKwjAQQOfcV9zg0A5+QaWdFMShg6sgIb2SYHoJuSsUpP+uZnJ7vPdOQ/YZ2C4k2TrCL7xWsY8bh+ypA3DRiuAlRLqO581R1pAYaVPiSfDfvcGAySUpOaUJ55Vd9U8Xk9BdC9mlaX+bKaRrYZxraQ7qgxx7qUfbgdlhh6H/AMALNV4=</source>
+  </file>
+  <file path="FtpIOException.php" generated-path="FtpIOException.html" hash="3f76e99f462ff852279329fde35e31ac" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="amekusa\Kniphe" line="4" package="Default">
+      <extends>\amekusa\Kniphe\IOException</extends>
+      <name>FtpIOException</name>
+      <full_name>\amekusa\Kniphe\FtpIOException</full_name>
+      <docblock line="4">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="4" description="Default"/>
+        <tag name="inherited_from" description="\amekusa\Kniphe\IOException" refers="\amekusa\Kniphe\IOException" link="/classes/amekusa.Kniphe.IOException.html"/>
+      </docblock>
+      <property static="false" visibility="public" namespace="amekusa\Kniphe" line="5" package="Default">
+        <name>$stream</name>
+        <full_name>\amekusa\Kniphe\IOException::stream</full_name>
+        <default>null</default>
+        <docblock line="5">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="amekusa\Kniphe" line="6" package="Default">
+        <name>_closeStream</name>
+        <full_name>\amekusa\Kniphe\FtpIOException::_closeStream()</full_name>
+        <docblock line="6">
+          <description></description>
+          <long-description></long-description>
+          <tag name="inherited_from" description="\amekusa\Kniphe\IOException::_closeStream()" refers="\amekusa\Kniphe\IOException::_closeStream()" link="/classes/amekusa.Kniphe.IOException.html#method__closeStream"/>
+        </docblock>
+      </method>
+      <method final="true" abstract="false" static="false" visibility="public" namespace="amekusa\Kniphe" line="7" package="Default">
+        <name>closeStream</name>
+        <full_name>\amekusa\Kniphe\IOException::closeStream()</full_name>
+        <docblock line="7">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+        <inherited_from>\amekusa\Kniphe\IOException</inherited_from>
+      </method>
+      <method final="false" abstract="true" static="false" visibility="protected" namespace="amekusa\Kniphe" line="12" package="Default">
+        <name>_closeStream</name>
+        <full_name>\amekusa\Kniphe\IOException::_closeStream()</full_name>
+        <docblock line="12">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+        <inherited_from>\amekusa\Kniphe\IOException</inherited_from>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="4" code="PPC:ERR-50005">No summary for class \amekusa\Kniphe\FtpIOException</error>
+      <error line="6" code="PPC:ERR-50008">No summary for method _closeStream()</error>
+    </parse_markers>
+    <source>eJxNijEKwkAQAOvbV1xhkRS+IJJUCmJhYSvIsdlwh8lmud2DgOTvamzshpk5dBIFOEykEpD8B55Fw/3CSSI1ADgGVX8yOV+PC5JYmtnTYsS9+n/3AgdO8myERr0fCuPmHzjOSjfLFKaq/m4uk5XMfjD5xWpnMem+1W2qG3ArrNC1bzZjNks=</source>
+  </file>
+  <file path="functions.php" generated-path="functions.html" hash="aeef8fee48a51ee8c0512596ca9c423c" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <constant namespace="" line="142" package="Default">
+      <name>$xConstant</name>
+      <full_name>\$xConstant</full_name>
+      <value>$xAltValue</value>
+      <docblock line="142">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="142" description="Default"/>
+      </docblock>
+    </constant>
+    <function namespace="amekusa\Kniphe" line="19" package="Default">
+      <name>verify_ini</name>
+      <full_name>\amekusa\Kniphe\verify_ini()</full_name>
+      <docblock line="19">
+        <description>Verify whether a specific PHP directive has a specific value.</description>
+        <long-description></long-description>
+        <tag name="package" line="19" description="Default"/>
+        <tag name="param" line="19" description="&lt;p&gt;Name of PHP directive&lt;/p&gt;" type="string" variable="$xName">
+          <type>string</type>
+        </tag>
+        <tag name="param" line="19" description="&lt;p&gt;Value of PHP directive&lt;/p&gt;" type="mixed" variable="$xValue">
+          <type>mixed</type>
+        </tag>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$xName</name>
+        <default></default>
+        <type>string</type>
+      </argument>
+      <argument line="0" by_reference="false">
+        <name>$xValue</name>
+        <default></default>
+        <type>mixed</type>
+      </argument>
+    </function>
+    <function namespace="amekusa\Kniphe" line="33" package="Default">
+      <name>type</name>
+      <full_name>\amekusa\Kniphe\type()</full_name>
+      <docblock line="33">
+        <description>Returns the type of a specific value.</description>
+        <long-description>If the value is object, returns the class name of the object.</long-description>
+        <tag name="package" line="33" description="Default"/>
+        <tag name="param" line="33" description="" type="mixed" variable="$xValue">
+          <type>mixed</type>
+        </tag>
+        <tag name="return" line="33" description="" type="string">
+          <type>string</type>
+        </tag>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$xValue</name>
+        <default></default>
+        <type>mixed</type>
+      </argument>
+    </function>
+    <function namespace="amekusa\Kniphe" line="51" package="Default">
+      <name>type_matches</name>
+      <full_name>\amekusa\Kniphe\type_matches()</full_name>
+      <docblock line="51">
+        <description>Returns whether the type of a specific value matches a specific type or not.</description>
+        <long-description></long-description>
+        <tag name="package" line="51" description="Default"/>
+        <tag name="param" line="51" description="" type="mixed" variable="$xValue">
+          <type>mixed</type>
+        </tag>
+        <tag name="param" line="51" description="" type="string" variable="$xType">
+          <type>string</type>
+        </tag>
+        <tag name="return" line="51" description="" type="boolean">
+          <type>boolean</type>
+        </tag>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$xValue</name>
+        <default></default>
+        <type>mixed</type>
+      </argument>
+      <argument line="0" by_reference="false">
+        <name>$xType</name>
+        <default></default>
+        <type>string</type>
+      </argument>
+    </function>
+    <function namespace="amekusa\Kniphe" line="75" package="Default">
+      <name>array_like</name>
+      <full_name>\amekusa\Kniphe\array_like()</full_name>
+      <docblock line="75">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="75" description="Default"/>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$xValue</name>
+        <default></default>
+        <type/>
+      </argument>
+    </function>
+    <function namespace="amekusa\Kniphe" line="83" package="Default">
+      <name>iterable</name>
+      <full_name>\amekusa\Kniphe\iterable()</full_name>
+      <docblock line="83">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="83" description="Default"/>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$xValue</name>
+        <default></default>
+        <type/>
+      </argument>
+    </function>
+    <function namespace="amekusa\Kniphe" line="91" package="Default">
+      <name>bool</name>
+      <full_name>\amekusa\Kniphe\bool()</full_name>
+      <docblock line="91">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="91" description="Default"/>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$xValue</name>
+        <default></default>
+        <type/>
+      </argument>
+    </function>
+    <function namespace="amekusa\Kniphe" line="97" package="Default">
+      <name>boolean</name>
+      <full_name>\amekusa\Kniphe\boolean()</full_name>
+      <docblock line="97">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="97" description="Default"/>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$xValue</name>
+        <default></default>
+        <type/>
+      </argument>
+    </function>
+    <function namespace="amekusa\Kniphe" line="101" package="Default">
+      <name>int</name>
+      <full_name>\amekusa\Kniphe\int()</full_name>
+      <docblock line="101">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="101" description="Default"/>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$xValue</name>
+        <default></default>
+        <type/>
+      </argument>
+    </function>
+    <function namespace="amekusa\Kniphe" line="106" package="Default">
+      <name>integer</name>
+      <full_name>\amekusa\Kniphe\integer()</full_name>
+      <docblock line="106">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="106" description="Default"/>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$xValue</name>
+        <default></default>
+        <type/>
+      </argument>
+    </function>
+    <function namespace="amekusa\Kniphe" line="110" package="Default">
+      <name>str</name>
+      <full_name>\amekusa\Kniphe\str()</full_name>
+      <docblock line="110">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="110" description="Default"/>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$xValue</name>
+        <default></default>
+        <type/>
+      </argument>
+    </function>
+    <function namespace="amekusa\Kniphe" line="121" package="Default">
+      <name>string</name>
+      <full_name>\amekusa\Kniphe\string()</full_name>
+      <docblock line="121">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="121" description="Default"/>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$xValue</name>
+        <default></default>
+        <type/>
+      </argument>
+    </function>
+    <function namespace="amekusa\Kniphe" line="125" package="Default">
+      <name>null_safe</name>
+      <full_name>\amekusa\Kniphe\null_safe()</full_name>
+      <docblock line="125">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="125" description="Default"/>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$xVar</name>
+        <default></default>
+        <type/>
+      </argument>
+      <argument line="0" by_reference="false">
+        <name>$xAltValue</name>
+        <default></default>
+        <type/>
+      </argument>
+    </function>
+    <function namespace="amekusa\Kniphe" line="129" package="Default">
+      <name>empty_safe</name>
+      <full_name>\amekusa\Kniphe\empty_safe()</full_name>
+      <docblock line="129">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="129" description="Default"/>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$xVar</name>
+        <default></default>
+        <type/>
+      </argument>
+      <argument line="0" by_reference="false">
+        <name>$xAltValue</name>
+        <default></default>
+        <type/>
+      </argument>
+    </function>
+    <function namespace="amekusa\Kniphe" line="140" package="Default">
+      <name>undef_safe</name>
+      <full_name>\amekusa\Kniphe\undef_safe()</full_name>
+      <docblock line="140">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="140" description="Default"/>
+        <tag name="param" line="140" description="" type="string" variable="$xConstant">
+          <type>string</type>
+        </tag>
+        <tag name="param" line="140" description="" type="mixed" variable="$xAltValue">
+          <type>mixed</type>
+        </tag>
+        <tag name="param" line="140" description="" type="boolean" variable="$xDefines">
+          <type>boolean</type>
+        </tag>
+        <tag name="return" line="140" description="" type="mixed">
+          <type>mixed</type>
+        </tag>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$xConstant</name>
+        <default></default>
+        <type>string</type>
+      </argument>
+      <argument line="0" by_reference="false">
+        <name>$xAltValue</name>
+        <default>null</default>
+        <type>mixed</type>
+      </argument>
+      <argument line="0" by_reference="false">
+        <name>$xDefines</name>
+        <default>false</default>
+        <type>boolean</type>
+      </argument>
+    </function>
+    <function namespace="amekusa\Kniphe" line="149" package="Default">
+      <name>undefined_safe</name>
+      <full_name>\amekusa\Kniphe\undefined_safe()</full_name>
+      <docblock line="149">
+        <description>Alias of {@link undef_safe()}</description>
+        <long-description></long-description>
+        <tag name="package" line="149" description="Default"/>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$xConstant</name>
+        <default></default>
+        <type/>
+      </argument>
+      <argument line="0" by_reference="false">
+        <name>$xAltValue</name>
+        <default>null</default>
+        <type/>
+      </argument>
+      <argument line="0" by_reference="false">
+        <name>$xDefines</name>
+        <default>false</default>
+        <type/>
+      </argument>
+    </function>
+    <function namespace="amekusa\Kniphe" line="153" package="Default">
+      <name>first</name>
+      <full_name>\amekusa\Kniphe\first()</full_name>
+      <docblock line="153">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="153" description="Default"/>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$xArray</name>
+        <default></default>
+        <type/>
+      </argument>
+    </function>
+    <function namespace="amekusa\Kniphe" line="157" package="Default">
+      <name>_first</name>
+      <full_name>\amekusa\Kniphe\_first()</full_name>
+      <docblock line="157">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="157" description="Default"/>
+      </docblock>
+      <argument line="0" by_reference="true">
+        <name>$xArray</name>
+        <default></default>
+        <type/>
+      </argument>
+    </function>
+    <function namespace="amekusa\Kniphe" line="163" package="Default">
+      <name>last</name>
+      <full_name>\amekusa\Kniphe\last()</full_name>
+      <docblock line="163">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="163" description="Default"/>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$xArray</name>
+        <default></default>
+        <type/>
+      </argument>
+    </function>
+    <function namespace="amekusa\Kniphe" line="167" package="Default">
+      <name>_last</name>
+      <full_name>\amekusa\Kniphe\_last()</full_name>
+      <docblock line="167">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="167" description="Default"/>
+      </docblock>
+      <argument line="0" by_reference="true">
+        <name>$xArray</name>
+        <default></default>
+        <type/>
+      </argument>
+    </function>
+    <function namespace="amekusa\Kniphe" line="183" package="Default">
+      <name>enter_array</name>
+      <full_name>\amekusa\Kniphe\enter_array()</full_name>
+      <docblock line="183">
+        <description>If the array:$xArray has the key:$xKey, $xArray[$xKey] is returned.</description>
+        <long-description>Otherwise $xAltValue is returned.</long-description>
+        <tag name="package" line="183" description="Default"/>
+        <tag name="param" line="183" description="" type="array" variable="$xArray">
+          <type>array</type>
+        </tag>
+        <tag name="param" line="183" description="" type="integer|string" variable="$xKey">
+          <type>integer</type>
+          <type>string</type>
+        </tag>
+        <tag name="param" line="183" description="" type="mixed" variable="$xAltValue">
+          <type>mixed</type>
+        </tag>
+        <tag name="return" line="183" description="the description" type="\amekusa\Kniphe\see">
+          <type>\amekusa\Kniphe\see</type>
+        </tag>
+      </docblock>
+      <argument line="0" by_reference="true">
+        <name>$xArray</name>
+        <default></default>
+        <type>array</type>
+      </argument>
+      <argument line="0" by_reference="false">
+        <name>$xKey</name>
+        <default></default>
+        <type>integer|string</type>
+      </argument>
+      <argument line="0" by_reference="false">
+        <name>$xAltValue</name>
+        <default>null</default>
+        <type>mixed</type>
+      </argument>
+    </function>
+    <function namespace="amekusa\Kniphe" line="188" package="Default">
+      <name>empty_safe_push</name>
+      <full_name>\amekusa\Kniphe\empty_safe_push()</full_name>
+      <docblock line="188">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="188" description="Default"/>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$xElm</name>
+        <default></default>
+        <type/>
+      </argument>
+      <argument line="0" by_reference="true">
+        <name>$xArray</name>
+        <default></default>
+        <type/>
+      </argument>
+    </function>
+    <function namespace="amekusa\Kniphe" line="193" package="Default">
+      <name>null_safe_push</name>
+      <full_name>\amekusa\Kniphe\null_safe_push()</full_name>
+      <docblock line="193">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="193" description="Default"/>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$xElm</name>
+        <default></default>
+        <type/>
+      </argument>
+      <argument line="0" by_reference="true">
+        <name>$xArray</name>
+        <default></default>
+        <type/>
+      </argument>
+    </function>
+    <function namespace="amekusa\Kniphe" line="198" package="Default">
+      <name>arrays_are_equal</name>
+      <full_name>\amekusa\Kniphe\arrays_are_equal()</full_name>
+      <docblock line="198">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="198" description="Default"/>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$xArrayX</name>
+        <default></default>
+        <type>array</type>
+      </argument>
+      <argument line="0" by_reference="false">
+        <name>$xArrayY</name>
+        <default></default>
+        <type>array</type>
+      </argument>
+    </function>
+    <function namespace="amekusa\Kniphe" line="215" package="Default">
+      <name>flat_array</name>
+      <full_name>\amekusa\Kniphe\flat_array()</full_name>
+      <docblock line="215">
+        <description>#UNTESTED</description>
+        <long-description></long-description>
+        <tag name="package" line="215" description="Default"/>
+        <tag name="param" line="215" description="" type="mixed" variable="$xArgs">
+          <type>mixed</type>
+        </tag>
+        <tag name="return" line="215" description="" type="array">
+          <type>array</type>
+        </tag>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$xArgs</name>
+        <default></default>
+        <type>mixed</type>
+      </argument>
+    </function>
+    <function namespace="amekusa\Kniphe" line="228" package="Default">
+      <name>array_about</name>
+      <full_name>\amekusa\Kniphe\array_about()</full_name>
+      <docblock line="228">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="228" description="Default"/>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$xField</name>
+        <default></default>
+        <type/>
+      </argument>
+      <argument line="0" by_reference="false">
+        <name>$xArray</name>
+        <default></default>
+        <type/>
+      </argument>
+    </function>
+    <function namespace="amekusa\Kniphe" line="236" package="Default">
+      <name>get</name>
+      <full_name>\amekusa\Kniphe\get()</full_name>
+      <docblock line="236">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="236" description="Default"/>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$xName</name>
+        <default></default>
+        <type/>
+      </argument>
+      <argument line="0" by_reference="false">
+        <name>$xFrom</name>
+        <default></default>
+        <type/>
+      </argument>
+      <argument line="0" by_reference="false">
+        <name>$xAltValue</name>
+        <default>null</default>
+        <type/>
+      </argument>
+    </function>
+    <function namespace="amekusa\Kniphe" line="247" package="Default">
+      <name>string_is_nonsense</name>
+      <full_name>\amekusa\Kniphe\string_is_nonsense()</full_name>
+      <docblock line="247">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="247" description="Default"/>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$xString</name>
+        <default></default>
+        <type/>
+      </argument>
+    </function>
+    <function namespace="amekusa\Kniphe" line="251" package="Default">
+      <name>string_is_mb</name>
+      <full_name>\amekusa\Kniphe\string_is_mb()</full_name>
+      <docblock line="251">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="251" description="Default"/>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$xString</name>
+        <default></default>
+        <type/>
+      </argument>
+    </function>
+    <function namespace="amekusa\Kniphe" line="255" package="Default">
+      <name>strings_are_equal</name>
+      <full_name>\amekusa\Kniphe\strings_are_equal()</full_name>
+      <docblock line="255">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="255" description="Default"/>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$xStringX</name>
+        <default></default>
+        <type/>
+      </argument>
+      <argument line="0" by_reference="false">
+        <name>$xStringY</name>
+        <default></default>
+        <type/>
+      </argument>
+      <argument line="0" by_reference="false">
+        <name>$xCaseInsensitive</name>
+        <default>false</default>
+        <type/>
+      </argument>
+    </function>
+    <function namespace="amekusa\Kniphe" line="268" package="Default">
+      <name>string_contains</name>
+      <full_name>\amekusa\Kniphe\string_contains()</full_name>
+      <docblock line="268">
+        <description>Checks whether $xSbjStr contains $xObjStr or not.</description>
+        <long-description></long-description>
+        <tag name="package" line="268" description="Default"/>
+        <tag name="param" line="268" description="" type="string" variable="$xSbjStr">
+          <type>string</type>
+        </tag>
+        <tag name="param" line="268" description="" type="string" variable="$xObjStr">
+          <type>string</type>
+        </tag>
+        <tag name="param" line="268" description="" type="boolean" variable="$xCaseInsensitive">
+          <type>boolean</type>
+        </tag>
+        <tag name="return" line="268" description="" type="boolean">
+          <type>boolean</type>
+        </tag>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$xSbjStr</name>
+        <default></default>
+        <type>string</type>
+      </argument>
+      <argument line="0" by_reference="false">
+        <name>$xObjStr</name>
+        <default></default>
+        <type>string</type>
+      </argument>
+      <argument line="0" by_reference="false">
+        <name>$xCaseInsensitive</name>
+        <default>false</default>
+        <type>boolean</type>
+      </argument>
+    </function>
+    <function namespace="amekusa\Kniphe" line="272" package="Default">
+      <name>repeat_string</name>
+      <full_name>\amekusa\Kniphe\repeat_string()</full_name>
+      <docblock line="272">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="272" description="Default"/>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$xString</name>
+        <default></default>
+        <type/>
+      </argument>
+      <argument line="0" by_reference="false">
+        <name>$xRepetition</name>
+        <default>1</default>
+        <type/>
+      </argument>
+    </function>
+    <function namespace="amekusa\Kniphe" line="286" package="Default">
+      <name>ext</name>
+      <full_name>\amekusa\Kniphe\ext()</full_name>
+      <docblock line="286">
+        <description>Gets the extention from a file path.</description>
+        <long-description></long-description>
+        <tag name="package" line="286" description="Default"/>
+        <tag name="param" line="286" description="" type="" variable="$xPath"/>
+        <tag name="return" line="286" description="" type=""/>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$xPath</name>
+        <default></default>
+        <type/>
+      </argument>
+    </function>
+    <function namespace="amekusa\Kniphe" line="290" package="Default">
+      <name>ordinal_number</name>
+      <full_name>\amekusa\Kniphe\ordinal_number()</full_name>
+      <docblock line="290">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="290" description="Default"/>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$xNumber</name>
+        <default></default>
+        <type/>
+      </argument>
+      <argument line="0" by_reference="false">
+        <name>$xWithSupTag</name>
+        <default>false</default>
+        <type/>
+      </argument>
+    </function>
+    <function namespace="amekusa\Kniphe" line="310" package="Default">
+      <name>on_shutdown</name>
+      <full_name>\amekusa\Kniphe\on_shutdown()</full_name>
+      <docblock line="310">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="310" description="Default"/>
+      </docblock>
+    </function>
+    <function namespace="amekusa\Kniphe" line="329" package="Default">
+      <name>handle_error</name>
+      <full_name>\amekusa\Kniphe\handle_error()</full_name>
+      <docblock line="329">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="329" description="Default"/>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$xErrorNo</name>
+        <default></default>
+        <type/>
+      </argument>
+      <argument line="0" by_reference="false">
+        <name>$xErrorMsg</name>
+        <default></default>
+        <type/>
+      </argument>
+      <argument line="0" by_reference="false">
+        <name>$xErroredFile</name>
+        <default></default>
+        <type/>
+      </argument>
+      <argument line="0" by_reference="false">
+        <name>$xErroredLine</name>
+        <default></default>
+        <type/>
+      </argument>
+    </function>
+    <function namespace="amekusa\Kniphe" line="340" package="Default">
+      <name>buf</name>
+      <full_name>\amekusa\Kniphe\buf()</full_name>
+      <docblock line="340">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="340" description="Default"/>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$xCallback</name>
+        <default>null</default>
+        <type/>
+      </argument>
+      <argument line="0" by_reference="false">
+        <name>$xForcesPush</name>
+        <default>false</default>
+        <type/>
+      </argument>
+    </function>
+    <function namespace="amekusa\Kniphe" line="353" package="Default">
+      <name>buffer</name>
+      <full_name>\amekusa\Kniphe\buffer()</full_name>
+      <docblock line="353">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="353" description="Default"/>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$xCallback</name>
+        <default>null</default>
+        <type/>
+      </argument>
+      <argument line="0" by_reference="false">
+        <name>$xForcesPush</name>
+        <default>false</default>
+        <type/>
+      </argument>
+    </function>
+    <function namespace="amekusa\Kniphe" line="357" package="Default">
+      <name>invoke</name>
+      <full_name>\amekusa\Kniphe\invoke()</full_name>
+      <docblock line="357">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="357" description="Default"/>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$xCallback</name>
+        <default></default>
+        <type/>
+      </argument>
+    </function>
+    <function namespace="amekusa\Kniphe" line="365" package="Default">
+      <name>template</name>
+      <full_name>\amekusa\Kniphe\template()</full_name>
+      <docblock line="365">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="365" description="Default"/>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$xTemplate</name>
+        <default></default>
+        <type/>
+      </argument>
+      <argument line="0" by_reference="false">
+        <name>$xVariables</name>
+        <default></default>
+        <type/>
+      </argument>
+    </function>
+    <interface namespace="amekusa\Kniphe" line="9" package="Default">
+      <name>functions</name>
+      <full_name>\amekusa\Kniphe\functions</full_name>
+      <docblock line="9">
+        <description>Functions</description>
+        <long-description></long-description>
+        <tag name="author" line="9" description="amekusa" link="mailto:post@amekusa.com"/>
+        <tag name="package" line="9" description="Default"/>
+      </docblock>
+      <constant namespace="amekusa\Kniphe" line="10" package="Default">
+        <name>required</name>
+        <full_name>\amekusa\Kniphe\functions::required</full_name>
+        <value>true</value>
+        <docblock line="10">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </constant>
+    </interface>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="75" code="PPC:ERR-50015">Argument $xValue is missing from the Docblock of array_like</error>
+      <error line="75" code="PPC:ERR-50011">No summary for function \amekusa\Kniphe\array_like()</error>
+      <error line="83" code="PPC:ERR-50015">Argument $xValue is missing from the Docblock of iterable</error>
+      <error line="83" code="PPC:ERR-50011">No summary for function \amekusa\Kniphe\iterable()</error>
+      <error line="91" code="PPC:ERR-50015">Argument $xValue is missing from the Docblock of bool</error>
+      <error line="91" code="PPC:ERR-50011">No summary for function \amekusa\Kniphe\bool()</error>
+      <error line="97" code="PPC:ERR-50015">Argument $xValue is missing from the Docblock of boolean</error>
+      <error line="97" code="PPC:ERR-50011">No summary for function \amekusa\Kniphe\boolean()</error>
+      <error line="101" code="PPC:ERR-50015">Argument $xValue is missing from the Docblock of int</error>
+      <error line="101" code="PPC:ERR-50011">No summary for function \amekusa\Kniphe\int()</error>
+      <error line="106" code="PPC:ERR-50015">Argument $xValue is missing from the Docblock of integer</error>
+      <error line="106" code="PPC:ERR-50011">No summary for function \amekusa\Kniphe\integer()</error>
+      <error line="110" code="PPC:ERR-50015">Argument $xValue is missing from the Docblock of str</error>
+      <error line="110" code="PPC:ERR-50011">No summary for function \amekusa\Kniphe\str()</error>
+      <error line="121" code="PPC:ERR-50015">Argument $xValue is missing from the Docblock of string</error>
+      <error line="121" code="PPC:ERR-50011">No summary for function \amekusa\Kniphe\string()</error>
+      <error line="125" code="PPC:ERR-50015">Argument $xVar is missing from the Docblock of null_safe</error>
+      <error line="125" code="PPC:ERR-50015">Argument $xAltValue is missing from the Docblock of null_safe</error>
+      <error line="125" code="PPC:ERR-50011">No summary for function \amekusa\Kniphe\null_safe()</error>
+      <error line="129" code="PPC:ERR-50015">Argument $xVar is missing from the Docblock of empty_safe</error>
+      <error line="129" code="PPC:ERR-50015">Argument $xAltValue is missing from the Docblock of empty_safe</error>
+      <error line="129" code="PPC:ERR-50011">No summary for function \amekusa\Kniphe\empty_safe()</error>
+      <error line="140" code="PPC:ERR-50011">No summary for function \amekusa\Kniphe\undef_safe()</error>
+      <error line="149" code="PPC:ERR-50015">Argument $xConstant is missing from the Docblock of undefined_safe</error>
+      <error line="149" code="PPC:ERR-50015">Argument $xAltValue is missing from the Docblock of undefined_safe</error>
+      <error line="149" code="PPC:ERR-50015">Argument $xDefines is missing from the Docblock of undefined_safe</error>
+      <error line="153" code="PPC:ERR-50015">Argument $xArray is missing from the Docblock of first</error>
+      <error line="153" code="PPC:ERR-50011">No summary for function \amekusa\Kniphe\first()</error>
+      <error line="157" code="PPC:ERR-50015">Argument $xArray is missing from the Docblock of _first</error>
+      <error line="157" code="PPC:ERR-50011">No summary for function \amekusa\Kniphe\_first()</error>
+      <error line="163" code="PPC:ERR-50015">Argument $xArray is missing from the Docblock of last</error>
+      <error line="163" code="PPC:ERR-50011">No summary for function \amekusa\Kniphe\last()</error>
+      <error line="167" code="PPC:ERR-50015">Argument $xArray is missing from the Docblock of _last</error>
+      <error line="167" code="PPC:ERR-50011">No summary for function \amekusa\Kniphe\_last()</error>
+      <error line="188" code="PPC:ERR-50015">Argument $xElm is missing from the Docblock of empty_safe_push</error>
+      <error line="188" code="PPC:ERR-50015">Argument $xArray is missing from the Docblock of empty_safe_push</error>
+      <error line="188" code="PPC:ERR-50011">No summary for function \amekusa\Kniphe\empty_safe_push()</error>
+      <error line="193" code="PPC:ERR-50015">Argument $xElm is missing from the Docblock of null_safe_push</error>
+      <error line="193" code="PPC:ERR-50015">Argument $xArray is missing from the Docblock of null_safe_push</error>
+      <error line="193" code="PPC:ERR-50011">No summary for function \amekusa\Kniphe\null_safe_push()</error>
+      <error line="198" code="PPC:ERR-50015">Argument $xArrayX is missing from the Docblock of arrays_are_equal</error>
+      <error line="198" code="PPC:ERR-50015">Argument $xArrayY is missing from the Docblock of arrays_are_equal</error>
+      <error line="198" code="PPC:ERR-50011">No summary for function \amekusa\Kniphe\arrays_are_equal()</error>
+      <error line="228" code="PPC:ERR-50015">Argument $xField is missing from the Docblock of array_about</error>
+      <error line="228" code="PPC:ERR-50015">Argument $xArray is missing from the Docblock of array_about</error>
+      <error line="228" code="PPC:ERR-50011">No summary for function \amekusa\Kniphe\array_about()</error>
+      <error line="236" code="PPC:ERR-50015">Argument $xName is missing from the Docblock of get</error>
+      <error line="236" code="PPC:ERR-50015">Argument $xFrom is missing from the Docblock of get</error>
+      <error line="236" code="PPC:ERR-50015">Argument $xAltValue is missing from the Docblock of get</error>
+      <error line="236" code="PPC:ERR-50011">No summary for function \amekusa\Kniphe\get()</error>
+      <error line="247" code="PPC:ERR-50015">Argument $xString is missing from the Docblock of string_is_nonsense</error>
+      <error line="247" code="PPC:ERR-50011">No summary for function \amekusa\Kniphe\string_is_nonsense()</error>
+      <error line="251" code="PPC:ERR-50015">Argument $xString is missing from the Docblock of string_is_mb</error>
+      <error line="251" code="PPC:ERR-50011">No summary for function \amekusa\Kniphe\string_is_mb()</error>
+      <error line="255" code="PPC:ERR-50015">Argument $xStringX is missing from the Docblock of strings_are_equal</error>
+      <error line="255" code="PPC:ERR-50015">Argument $xStringY is missing from the Docblock of strings_are_equal</error>
+      <error line="255" code="PPC:ERR-50015">Argument $xCaseInsensitive is missing from the Docblock of strings_are_equal</error>
+      <error line="255" code="PPC:ERR-50011">No summary for function \amekusa\Kniphe\strings_are_equal()</error>
+      <error line="272" code="PPC:ERR-50015">Argument $xString is missing from the Docblock of repeat_string</error>
+      <error line="272" code="PPC:ERR-50015">Argument $xRepetition is missing from the Docblock of repeat_string</error>
+      <error line="272" code="PPC:ERR-50011">No summary for function \amekusa\Kniphe\repeat_string()</error>
+      <error line="290" code="PPC:ERR-50015">Argument $xNumber is missing from the Docblock of ordinal_number</error>
+      <error line="290" code="PPC:ERR-50015">Argument $xWithSupTag is missing from the Docblock of ordinal_number</error>
+      <error line="290" code="PPC:ERR-50011">No summary for function \amekusa\Kniphe\ordinal_number()</error>
+      <error line="310" code="PPC:ERR-50011">No summary for function \amekusa\Kniphe\on_shutdown()</error>
+      <error line="329" code="PPC:ERR-50015">Argument $xErrorNo is missing from the Docblock of handle_error</error>
+      <error line="329" code="PPC:ERR-50015">Argument $xErrorMsg is missing from the Docblock of handle_error</error>
+      <error line="329" code="PPC:ERR-50015">Argument $xErroredFile is missing from the Docblock of handle_error</error>
+      <error line="329" code="PPC:ERR-50015">Argument $xErroredLine is missing from the Docblock of handle_error</error>
+      <error line="329" code="PPC:ERR-50011">No summary for function \amekusa\Kniphe\handle_error()</error>
+      <error line="340" code="PPC:ERR-50015">Argument $xCallback is missing from the Docblock of buf</error>
+      <error line="340" code="PPC:ERR-50015">Argument $xForcesPush is missing from the Docblock of buf</error>
+      <error line="340" code="PPC:ERR-50011">No summary for function \amekusa\Kniphe\buf()</error>
+      <error line="353" code="PPC:ERR-50015">Argument $xCallback is missing from the Docblock of buffer</error>
+      <error line="353" code="PPC:ERR-50015">Argument $xForcesPush is missing from the Docblock of buffer</error>
+      <error line="353" code="PPC:ERR-50011">No summary for function \amekusa\Kniphe\buffer()</error>
+      <error line="357" code="PPC:ERR-50015">Argument $xCallback is missing from the Docblock of invoke</error>
+      <error line="357" code="PPC:ERR-50011">No summary for function \amekusa\Kniphe\invoke()</error>
+      <error line="365" code="PPC:ERR-50015">Argument $xTemplate is missing from the Docblock of template</error>
+      <error line="365" code="PPC:ERR-50015">Argument $xVariables is missing from the Docblock of template</error>
+      <error line="365" code="PPC:ERR-50011">No summary for function \amekusa\Kniphe\template()</error>
+    </parse_markers>
+    <source>eJy1GstuHMfxLH5F09lwudKGpJycSJESQZEKYZsklpQlQRIGs7O93DFnZzbzIFewBISSgcBIgBwCH5JbTo5tIDnkkkP+ZpHHZ6Sq+jHVM7NLK4kFgpyprndVV1f16N79yWiyFPtjmU38QAp4uCgy/8VHcTgZya2lpfXbt5fEbXFQxEEeJnEGL/j+wC/yUZIafHFvkmT5A/22FiTjHcBaXwrjXKZDZDw0DMTnS7cC+JuLVP6iCFM5ENsiTwsQ9saK+1Sm4fCVuBrJfCRBisgmMgiHYSBOfn4iBkAFzC6lGPkZX7z0o0KuGRUnfuqPRZanYXwuWtMj0E7Qr2TosmHY43AKCrWmnyInoX43oK8vGXvEJanqhXG4qmR0DXkHTW1NwTxY9M5lrhE6W0u3wqFYxaXtbTH0owxwY3klXuxPAzlBtqsfHCUiK4JRKXZTUX/AyJeBvN0WKytC87KSU5kXaawxUXxmxTP9Foi3pkMAajqIcQHx60vDCXUqg9cj2RlR5q8mxKUpSOJQcSeACDOR9D8DMV2tvGIQRH6WiViHDSEKqxJlJ24EV0x0+N2QoVKrPEjkpMxTnO2K8aKA0Hmkh13asjT9JInqFG0ESz9ul4iwFRrwcIOcy5ThDaPEb8IkOMNThjUgqgWG6aep/6oBkeAML5VZUqSBbEA1S4hdOsXxY1MGmP27KBPE2M+DkXT2scJNRZzcHOfKLj8DUh5/HYh6AnharjGgq4ltQqhX2iMUzrZ4/VpUgRhj66ZqOmzVGUG8a3xMDnA+PFsa2Khk4ARu2jSQ6LTgNJUUaiBSKcJp3GRqIFGbyKGp7KsGIptfnKyWj3Ac1SgpIUoydZDUsOJiDGU6cNhr2CK1Aj+K/H7kqmWAC50NSL4bUQVaRHQJTkoY0XITVZ0sSiphRcAiOYOkqNqkQIsj5EeV6PhRTS+qkp6chlmeafKyiphTNYTD348DCcVAoSC1xbEiGwuM3cKUh14UXjRW8jklj2VHU7kHem13TdEXu8hxNwhkllXZvbHa01nq6hlCA+Rkyw+q5VnqQz+SocD30tIpW0zD5tNNA24+ixQcDZUeNHtlwnRFG9Vqd0m7TnmqrKLETimhqiTUW0dPVuXnJAqvpMyyxuO4NMyoA2hztNFVu0kbt3hzInBIkzLz/Fdz9LyjvG024KKEWebFizgJFg/Py5NTfUa4nCF1SocoVef4pGIHcwk33KWJiyjyMn+odkiKx/BulNd9mqkOFlA64j6JT8UmQ3a5yvEkf/U92BIeZ2uQiDdAWVvT1G7sJbT78oYWxXBiS5imsPJQDsNYZrxNISK3SSnigRwaE4wcbgcMFui8bslR2HZe59aA4APGoAxtoCF80RZ+zbAjFIc5GrCNWwmEbgR3oxAmNKhMnz+IwviC29R502AuKvs/mKx1udFzjL6SjcMwzdAjVO45T89dcan04gqnQz+a7FJQ63k0ATzXSkF5aHIkZ2v9mboi4GBt1stZqKhFa/+NVjIeuDotVFIHW49zVFk2NTJN6Ai9kAj7SL6iOODSc3p9iYOfYicHNBUe48hwFWaSx72CxPaUKmSaJ4Pr+vzablUQdtMuNcVKSjX2yixIQxqI3VyVeK2hi7Fxb1eU5rnZepPj+dYxnlXtDTitbKa473St4m78PrXQmxTZCFjtR+OumJsXsGqVw4TQcl4KvF+AxTn1ezFzarij6L3ZkyN4B+HE+2nXjf8zkjdMoDkNRsK4+qmAJGzF4CaxvQMP6kisYj0jrLHBGissVQ8JirctxMVGTndSGosd0EC8ssLGpbhDgOWaNS3wFa02cmyNtdD6+hve0VWvz370+Ohs//Rs/2Hz8LybnjuHj6+3DsvwYeTntttAfHWZhbVBdw7U87d8WALYKhLiROUhYLUjdsRdzFEC4/WJBm86XQzxNakMfDYNb72EEsookSgMUQiLZVdT8iM4dCZWSQ8GvHM4A+D05/YoPHSijLDKpCr3EOw2O9UarJj6/aTAYngQymjAdmTdP7UUU+rjBiD1tWR1M2jY0bLTr1fVOHeu8g7SZLyo6PCOEHF1Q0j3ktbdikkbOLfFmigCc9jRdSW5SrNiwy/rJADoFRmURNQRl0rnXvpppmzUangIMbqgnYIQkb8z02ldDQMFAHzCbqicZUvHijNRd0XpLda51BtXD4sUtAsSfkCDU93qloftsgHiFU5At0h0bV4iz2M77jcyHPex949kbFe7CKNr89iPPBkHyQBbavDEPVFBbRTmDlsK8Slarh6f4eOen8lDMjOkW/Rq11jD4ANdAEvBeNLIXN0ob/CuUCPp22mNx2vV3kgGF+VVIeD0PwM0bE9zH2ZbgBwrSOOFoD3eFVnTynF1RQ+SdU/ceHGoA2p0WzViu1bMTf61jqki3Vez1SRp4tqhc0Bz2STMmxHd9EjlREINtCOaSbfWtAcreUhI21i2TSFTM5vNNaxmkBuItLEFZxIkJKdF0J07HSprYm2bqlZzn/hI5qonlNMcNisdN7C3hQ/ddyTFxM9HlSC3picAZNFRy7wjm2K5Qixn6iz6yghc6KJB2m3qvb3W7og7YLLrqSSFLQebD46zPg34R/SArnoS5qPTYnLmnztBbWXFcBhO9fTk9zNL1BE/Fnc3NsBXH97FDqBpbUf8DOqcYgFs2/mobeocVursKszVGaLIiEo3J7gZxV2xic+3GIuMvhTAvz4cQBdbFvXDOmo8aEb9aR01raGqLkTVjNI3jjX3smKyg6eKga0BbJ2AvE5o2yxaJSSxl42KfJBcxavK4zja7KdpQtMK/qU2gwae8usMTS0WU5981p924XkbS3n7JXfqvrff6x33lBM05GS3d7rvQPaOe02IBH6y2zs6PHpUWfjk5PDjZhK1UlKRp9fXxez6d7O3v5m9/XJ2/efZ2z/N3n0ze/d3sXrg536kTAeUb2fX33Tg71/+/atv//Hrr/71hy9m199Z7Nm7387e/XX27kt8vf7un3/74+z6K2SKdF8g3+uvZ7+8Rkn48zUh/J4UkMEoEe3H8ciPBxF0j+Sw9pYAxbDF3Dt+uG8UVSgeqdTgXdg/DDaWWeaf18BYAaqwCOZ0CI5KPSPEfqnED5eEWH68nCNnw2XbpNUC8R2b7zwxXZunRHKUYKmgx0+yc/ssBwfAnb1+DIwh5dCVh0cnveNHvf3T0yW23zU3lZa1rNSAx6f7PZ5PKmB7KRTlwCaIjl4tbixqjkMNedWxzKoNawmzt9lGch2IykdpciV+GP4QmZL9i/8P38r1czGkziiK+n5wwW6iDpI0kNkJTL/OoZDlPtgoWkA3lNTD8snJnYkN17KnVr3wJIFGSzMgsgQbRj/VRS6+TKhXtuTm/gbQ1EdrvC8vb/WYptDALuuBHwujEaJGoXRr/hCkEN/LE6ajchzo4tcu7auWsXGGzSB1v9VmEe6b6nU7IzfjpG0ZSj1/che7KtHeancEM3uNQJjaZvC4hJ57Dv02IdOoaxlsCu7FNRKgUpm7IocowfCK1p7pR/U/ONIQncAGc7tej966uhZ4cniCfy1v6K4yqWZzNXLb/xvyUEbhGL9d4RHebaMQIKzMtwCpfJfQEz0hO8OvHt3dOxji+JyAmHalNrjyhn6VwyGPGxejqJTPtQmp0o04MD9o0PrS/Z3/ABPq9U0=</source>
+  </file>
+  <file path="IOException.php" generated-path="IOException.html" hash="d14831af76edaed0aca28130ef2a8d9e" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <class final="false" abstract="true" namespace="amekusa\Kniphe" line="4" package="Default">
+      <extends>\RuntimeException</extends>
+      <name>IOException</name>
+      <full_name>\amekusa\Kniphe\IOException</full_name>
+      <docblock line="4">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="4" description="Default"/>
+      </docblock>
+      <property static="false" visibility="public" namespace="amekusa\Kniphe" line="5" package="Default">
+        <name>$stream</name>
+        <full_name>\amekusa\Kniphe\IOException::stream</full_name>
+        <default>null</default>
+        <docblock line="5">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <method final="true" abstract="false" static="false" visibility="public" namespace="amekusa\Kniphe" line="7" package="Default">
+        <name>closeStream</name>
+        <full_name>\amekusa\Kniphe\IOException::closeStream()</full_name>
+        <docblock line="7">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="true" static="false" visibility="protected" namespace="amekusa\Kniphe" line="12" package="Default">
+        <name>_closeStream</name>
+        <full_name>\amekusa\Kniphe\IOException::_closeStream()</full_name>
+        <docblock line="12">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="4" code="PPC:ERR-50005">No summary for class \amekusa\Kniphe\IOException</error>
+      <error line="7" code="PPC:ERR-50008">No summary for method closeStream()</error>
+      <error line="12" code="PPC:ERR-50008">No summary for method _closeStream()</error>
+      <error line="5" code="PPC:ERR-50007">No summary for property $stream</error>
+    </parse_markers>
+    <source>eJxdj7EKwjAQhufkKW5waAefQK2TgzgIuhZKjFcaTK+hd4GC9N1Nq1R0++G/7/u57T40QZNpkYOxCCk8IpvyRC40uNHa3Fh6YwWsN8xwPB8Gi0FcR4CDIN0ZykskcS1+m6dWId68s7BKNJoWdkDR+41WS1M7Mh7qSHZGrO8Yr/Nxlk8C5WrIHFcTl62kcbwu3rI8hx4l9pR06p3gc1D9aFI/zot9J2gF77B8s+z+E6PeFy+kPV8Q</source>
+  </file>
+  <file path="main.php" generated-path="main.html" hash="2ae151a869a20ae839abe52349915070" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+    </parse_markers>
+    <source>eJyzsS/IKODKS8xNLS5ITE5VADKyS4sTY7zzMgsyUq25uNJK85JLMvPziq2silILSzOLUlOsueztAEHOE/w=</source>
+  </file>
+  <file path="math/functions.php" generated-path="math.functions.html" hash="6253befc8245260ad3fdb79e6c910676" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <function namespace="amekusa\Kniphe\math" line="9" package="Default">
+      <name>range</name>
+      <full_name>\amekusa\Kniphe\math\range()</full_name>
+      <docblock line="9">
+        <description>Functions :: Math :: Kniphe</description>
+        <long-description></long-description>
+        <tag name="package" line="9" description="Default"/>
+        <tag name="since" line="9" description="2013-09-25"/>
+        <tag name="version" line="9" description="2013-09-25"/>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$xValue</name>
+        <default></default>
+        <type/>
+      </argument>
+      <argument line="0" by_reference="false">
+        <name>$xMinValue</name>
+        <default></default>
+        <type/>
+      </argument>
+      <argument line="0" by_reference="false">
+        <name>$xMaxValue</name>
+        <default></default>
+        <type/>
+      </argument>
+    </function>
+    <function namespace="amekusa\Kniphe\math" line="15" package="Default">
+      <name>average</name>
+      <full_name>\amekusa\Kniphe\math\average()</full_name>
+      <docblock line="15">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="15" description="Default"/>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$xNums</name>
+        <default></default>
+        <type/>
+      </argument>
+    </function>
+    <function namespace="amekusa\Kniphe\math" line="19" package="Default">
+      <name>is_odd</name>
+      <full_name>\amekusa\Kniphe\math\is_odd()</full_name>
+      <docblock line="19">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="19" description="Default"/>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$xN</name>
+        <default></default>
+        <type/>
+      </argument>
+    </function>
+    <function namespace="amekusa\Kniphe\math" line="23" package="Default">
+      <name>is_even</name>
+      <full_name>\amekusa\Kniphe\math\is_even()</full_name>
+      <docblock line="23">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="23" description="Default"/>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$xN</name>
+        <default></default>
+        <type/>
+      </argument>
+    </function>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="9" code="PPC:ERR-50015">Argument $xValue is missing from the Docblock of range</error>
+      <error line="9" code="PPC:ERR-50015">Argument $xMinValue is missing from the Docblock of range</error>
+      <error line="9" code="PPC:ERR-50015">Argument $xMaxValue is missing from the Docblock of range</error>
+      <error line="15" code="PPC:ERR-50015">Argument $xNums is missing from the Docblock of average</error>
+      <error line="15" code="PPC:ERR-50011">No summary for function \amekusa\Kniphe\math\average()</error>
+      <error line="19" code="PPC:ERR-50015">Argument $xN is missing from the Docblock of is_odd</error>
+      <error line="19" code="PPC:ERR-50011">No summary for function \amekusa\Kniphe\math\is_odd()</error>
+      <error line="23" code="PPC:ERR-50015">Argument $xN is missing from the Docblock of is_even</error>
+      <error line="23" code="PPC:ERR-50011">No summary for function \amekusa\Kniphe\math\is_even()</error>
+    </parse_markers>
+    <source>eJx1j81Lw0AQxc/uXzFChWywJEY82E9PXqQePRXCkE6SxWYT9qNUxP/d3XRrE4qnnfnNe4+3i3VXd0xiQ7rDgsANn1bj9k2KrqZtg6aesySOGcTwamVhRCs1zGawcRf/noT+/KKFdAlZ+vA4TZ+n2VMPD6S084xxwlgZwkChrCiaHD9wb+keJseNkJcZT5zDN7sRJZx1sBgIOSgyVskBmo/Vq1HURR2QU/+xAH4GDdH9AfuO77bRfZUgR6XwK9e2ico9mrxfI+/LK/JrpSPOOSRQtFaac8A4Xei83e38bZjsd7iDjMPtEtIrBx1I/m9ZBst69QurrpYB</source>
+  </file>
+  <file path="scratch/function.snippet.php" generated-path="scratch.function.snippet.html" hash="f362a28719e2b498dce37dc4ac87c2e7" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <function namespace="" line="11" package="Default">
+      <name>vars</name>
+      <full_name>\vars()</full_name>
+      <docblock line="11">
+        <description>Functions :: util :: WPELib(lesser)</description>
+        <long-description></long-description>
+        <tag name="package" line="11" description="Default"/>
+        <tag name="author" line="11" description="Satoshi Soma"/>
+        <tag name="version" line="11" description="2013-10-11 by S.Soma&#10;&#10;#TODO Migrate to PHP Kniphe Project"/>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$xVars</name>
+        <default></default>
+        <type/>
+      </argument>
+    </function>
+    <function namespace="" line="21" package="Default">
+      <name>express_time</name>
+      <full_name>\express_time()</full_name>
+      <docblock line="21">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="21" description="Default"/>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$xTime</name>
+        <default></default>
+        <type/>
+      </argument>
+      <argument line="0" by_reference="false">
+        <name>$xFormat</name>
+        <default></default>
+        <type/>
+      </argument>
+    </function>
+    <function namespace="" line="29" package="Default">
+      <name>national_date</name>
+      <full_name>\national_date()</full_name>
+      <docblock line="29">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="29" description="Default"/>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$aCountry</name>
+        <default></default>
+        <type/>
+      </argument>
+      <argument line="0" by_reference="false">
+        <name>$aFormat</name>
+        <default>'Y-m-d H:i:s'</default>
+        <type/>
+      </argument>
+      <argument line="0" by_reference="false">
+        <name>$aTime</name>
+        <default></default>
+        <type/>
+      </argument>
+    </function>
+    <function namespace="" line="64" package="Default">
+      <name>alt_protocol</name>
+      <full_name>\alt_protocol()</full_name>
+      <docblock line="64">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="64" description="Default"/>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$aUrl</name>
+        <default></default>
+        <type/>
+      </argument>
+      <argument line="0" by_reference="false">
+        <name>$aProtocol</name>
+        <default>'http'</default>
+        <type/>
+      </argument>
+    </function>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="11" code="PPC:ERR-50015">Argument $xVars is missing from the Docblock of vars</error>
+      <error line="21" code="PPC:ERR-50015">Argument $xTime is missing from the Docblock of express_time</error>
+      <error line="21" code="PPC:ERR-50015">Argument $xFormat is missing from the Docblock of express_time</error>
+      <error line="21" code="PPC:ERR-50011">No summary for function \express_time()</error>
+      <error line="29" code="PPC:ERR-50015">Argument $aCountry is missing from the Docblock of national_date</error>
+      <error line="29" code="PPC:ERR-50015">Argument $aFormat is missing from the Docblock of national_date</error>
+      <error line="29" code="PPC:ERR-50015">Argument $aTime is missing from the Docblock of national_date</error>
+      <error line="29" code="PPC:ERR-50011">No summary for function \national_date()</error>
+      <error line="64" code="PPC:ERR-50015">Argument $aUrl is missing from the Docblock of alt_protocol</error>
+      <error line="64" code="PPC:ERR-50015">Argument $aProtocol is missing from the Docblock of alt_protocol</error>
+      <error line="64" code="PPC:ERR-50011">No summary for function \alt_protocol()</error>
+    </parse_markers>
+    <source>eJytVE1v0zAYPie/4pVWLc1Y5xVuKTAktmkSH6vUDoTWrfJab/FI48h2tlWoB05w5cSBSZyQJnHZYX+JIf4FrxOnzhhIIHF6vx8/72Mn99eyOPPJ0pIPS7CZpyPNRaogiiDXPDH2ZXfjKT9oJkwpJkPT9ojmOhYSelQLFXPoiQk1+aJ2wqRCCLi72r7Xaq+22m04mEJvpd600N9e34Zn/EhSzUAL6G514UnKs5hBV4pjNtLYRnz/0BKCEypVs3H2Ak0Ib3yPH0KTqyGVkk6rfAiS6VymUMYd3/O9hoQHUHaFnfmY0pKnR24OAb0MXWYqNr0MDWlGZr5XwcqOP6txYmeZRFGGmk8YDvXR4NDZppATqusseapt3Z5lAVNqcGgyHKMMzeCYBm7eeMWEoQAsUQx+Jf+vgDioRY1sWK5XX+kmQIM+Fnmq5RRRaImCagavWpPWGLYiHimDTwssQ6NhwLGjTDn9Ldh8MW33wnJGtWYyNZfVkCxL6IhNWKqVvSsU+GiIQ6O4GZDd/cFgsLdOAkfHrj+HmV92QFSeEo6tAZmIytM5s94pG1e5ODceonheQA4lt3lFNXqGJvL01ClHEuAkKQ8eUbwXo3Nk5m9s4Khcf/xiEK/P3xvz/e3XIrq8KpMXxvx498GYb+efyxO9A8noa+PNivNrL+A3kiR/L8mYTp0qLkBhlI2sEChQOs+VMslaiDq5AKXKZRn+J72uP5071VyA2tUql1f1tgsXoJpVUGzjGWFt5ra8M/MQy29LMfxQK+FCWFwEm6sTRYGLV11chC24qeVbi1U/kj/+R2iih5kUWoxEgoLtyMTcZtdmzBcXa50FhYIW4sbZAdnf3Y/27kQDMiDlU6iGV4LIZhA17AAhsLDzvL/R62+sI4e1h/5PUCPl3A==</source>
+  </file>
+  <file path="scratch/functions.php" generated-path="scratch.functions.html" hash="8483443b858d6e9bec2da7ec33ef0989" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <function namespace="amekusa\Kniphe\scratch" line="8" package="Default">
+      <name>body_html_of_dom_doc</name>
+      <full_name>\amekusa\Kniphe\scratch\body_html_of_dom_doc()</full_name>
+      <docblock line="8">
+        <description>Draft functions</description>
+        <long-description></long-description>
+        <tag name="package" line="8" description="Default"/>
+        <tag name="author" line="8" description="Satoshi Soma"/>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$xDoc</name>
+        <default></default>
+        <type>\DOMDocument</type>
+      </argument>
+    </function>
+    <function namespace="amekusa\Kniphe\scratch" line="17" package="Default">
+      <name>inner_html_of_dom</name>
+      <full_name>\amekusa\Kniphe\scratch\inner_html_of_dom()</full_name>
+      <docblock line="17">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="17" description="Default"/>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$xNode</name>
+        <default></default>
+        <type>\DOMNode</type>
+      </argument>
+    </function>
+    <function namespace="amekusa\Kniphe\scratch" line="46" package="Default">
+      <name>dom_as_html</name>
+      <full_name>\amekusa\Kniphe\scratch\dom_as_html()</full_name>
+      <docblock line="46">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="46" description="Default"/>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$xNode</name>
+        <default></default>
+        <type>\DOMNode</type>
+      </argument>
+    </function>
+    <function namespace="amekusa\Kniphe\scratch" line="61" package="Default">
+      <name>doms_are_equal</name>
+      <full_name>\amekusa\Kniphe\scratch\doms_are_equal()</full_name>
+      <docblock line="61">
+        <description>More precise equality.</description>
+        <long-description></long-description>
+        <tag name="package" line="61" description="Default"/>
+        <tag name="param" line="61" description="" type="\DOMNode" variable="$xNode1">
+          <type>\DOMNode</type>
+        </tag>
+        <tag name="param" line="61" description="" type="\DOMNode" variable="$xNode2">
+          <type>\DOMNode</type>
+        </tag>
+        <tag name="return" line="61" description="" type="boolean">
+          <type>boolean</type>
+        </tag>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$xNode1</name>
+        <default></default>
+        <type>\DOMNode</type>
+      </argument>
+      <argument line="0" by_reference="false">
+        <name>$xNode2</name>
+        <default></default>
+        <type>\DOMNode</type>
+      </argument>
+    </function>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="8" code="PPC:ERR-50015">Argument $xDoc is missing from the Docblock of body_html_of_dom_doc</error>
+      <error line="17" code="PPC:ERR-50015">Argument $xNode is missing from the Docblock of inner_html_of_dom</error>
+      <error line="17" code="PPC:ERR-50011">No summary for function \amekusa\Kniphe\scratch\inner_html_of_dom()</error>
+      <error line="46" code="PPC:ERR-50015">Argument $xNode is missing from the Docblock of dom_as_html</error>
+      <error line="46" code="PPC:ERR-50011">No summary for function \amekusa\Kniphe\scratch\dom_as_html()</error>
+    </parse_markers>
+    <source>eJzNVltv2jAUfia/4lRCIjAua6fthUGnQaVWWy8SaHupFLnBabwldmY7bdHEf9+xnUAIUPFSaRIowf7O7fuOj/l8nsWZx0lKVUZCCvjyO1fk/htnWUzvVSiJDuOhN+h0POjAVJJIQ5TzUDPBlVn6QnIdCwkzooWKGcxESnB94HklDB7EYhnEOk0CEQULkeI39O+nt9dTEeYp5RqaL/jahr9eo4l7MHILvXGYCE5vxIL6EUkUbQ8RYLxtEI9UXyTUOFFfl3PyeIMV+C2DabV7Y6Zp6r83ZpGQlIQx+NYePccsWRjPCoiCJpvY6DZ8b0yyjPLFxEB8t8LSTEhtM0FsNTEtc9rugn2YQCuvIanOJQdnqcgTvZxff/dxc1UhhXFOZZUVy4hxiaWZh02IReCfuN+9cUzUZJ22325DEajVwrheY9CBW54sAUuFu8s7+Nj/0P/0rlq6LVpSXpaMBTeaEvojKEOIZ8yqlKWSvEFjEJTVBqrotMdu+FpMS/Ng0GRT64DTZ6i2QsH3E5UKWeoWJFIeigXjjyaHRmnqtva0iEP0xpmkison+jPGPpjZ/h6BRVVAW1q7pePFLtlzdlWpTR84tgqmeJ4kw0JQphTFSvdxh6qWBnVmjFeKycNr3O8lZKNGYfKW3Y+UjPb0fnkq0ocgFBz11UGpqt+UdaG70DKGvYub+dX86mLWqp0eM0WIssdn77n5D0g/hsxSjoN8viWZxUy/xuYAPCohwyrpn5wkTC/7drRnRJIUavyeHt46s1tFbg9CJJRwexdUdVMBkTSwgerSnXZ3PK6nYIFA/tQMZ3yFv7PNJDS8DbfwcDLauCpQ5QjYcsvx8YMkOa1YVFZ3jLejMK404SEVka1gEiM9ocYOIZq4s7UVbIHLW3EWFlcLsapF2XMDlJ5P1p4OXRLruYef2jw4PTgQ6sizHeSvEunSqOmLjroWs5uGqc58V2CP16bMI2pY97/T2/bypsciJpUOUuw97P0oTwKb8oFbFtN7ueJhkmOkiUjtH4nyljj+Bi7mzLFz1hbLJjtd4+K3nUiHQLut5XIM9TKjgf0b56a07al1irg0LBhHwvBMno//AQUbIzw=</source>
+  </file>
+  <file path="web/functions.php" generated-path="web.functions.html" hash="7232d50c96e7a8deaf0668fe96e106df" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <namespace-alias name="_">\amekusa\Kniphe</namespace-alias>
+    <function namespace="amekusa\Kniphe\web" line="9" package="Default">
+      <name>current_url</name>
+      <full_name>\amekusa\Kniphe\web\current_url()</full_name>
+      <docblock line="9">
+        <description>Functions :: Web :: Kniphe</description>
+        <long-description></long-description>
+        <tag name="package" line="9" description="Default"/>
+        <tag name="version" line="9" description="2014-01-14"/>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$xWithoutQueryString</name>
+        <default>false</default>
+        <type/>
+      </argument>
+    </function>
+    <function namespace="amekusa\Kniphe\web" line="18" package="Default">
+      <name>current_protocol</name>
+      <full_name>\amekusa\Kniphe\web\current_protocol()</full_name>
+      <docblock line="18">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="18" description="Default"/>
+      </docblock>
+    </function>
+    <function namespace="amekusa\Kniphe\web" line="28" package="Default">
+      <name>abs_url</name>
+      <full_name>\amekusa\Kniphe\web\abs_url()</full_name>
+      <docblock line="28">
+        <description>TODO</description>
+        <long-description></long-description>
+        <tag name="package" line="28" description="Default"/>
+        <tag name="param" line="28" description="" type="\amekusa\Kniphe\web\unknown" variable="$xUrl">
+          <type>\amekusa\Kniphe\web\unknown</type>
+        </tag>
+        <tag name="return" line="28" description="" type="\amekusa\Kniphe\web\unknown">
+          <type>\amekusa\Kniphe\web\unknown</type>
+        </tag>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$xUrl</name>
+        <default></default>
+        <type>\amekusa\Kniphe\web\unknown</type>
+      </argument>
+    </function>
+    <function namespace="amekusa\Kniphe\web" line="35" package="Default">
+      <name>dom_str</name>
+      <full_name>\amekusa\Kniphe\web\dom_str()</full_name>
+      <docblock line="35">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="35" description="Default"/>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$xName</name>
+        <default></default>
+        <type/>
+      </argument>
+      <argument line="0" by_reference="false">
+        <name>$xAttributes</name>
+        <default></default>
+        <type/>
+      </argument>
+    </function>
+    <function namespace="amekusa\Kniphe\web" line="38" package="Default">
+      <name>parse_access_log_line</name>
+      <full_name>\amekusa\Kniphe\web\parse_access_log_line()</full_name>
+      <docblock line="38">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="38" description="Default"/>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$xTarget</name>
+        <default></default>
+        <type/>
+      </argument>
+    </function>
+    <function namespace="amekusa\Kniphe\web" line="69" package="Default">
+      <name>path_to_url</name>
+      <full_name>\amekusa\Kniphe\web\path_to_url()</full_name>
+      <docblock line="69">
+        <description>パスから絶対URLを作成</description>
+        <long-description></long-description>
+        <tag name="package" line="69" description="Default"/>
+        <tag name="param" line="69" description="&lt;p&gt;パス&lt;/p&gt;" type="string" variable="$path">
+          <type>string</type>
+        </tag>
+        <tag name="param" line="69" description="&lt;p&gt;デフォルトのポート（そのポートである場合にはURLに含めない）&lt;/p&gt;" type="integer" variable="$default_port">
+          <type>integer</type>
+        </tag>
+        <tag name="return" line="69" description="URL" type="string">
+          <type>string</type>
+        </tag>
+        <tag name="link" line="69" description="http://www.programming-magic.com/20080628015044/" link="http://www.programming-magic.com/20080628015044/"/>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$path</name>
+        <default></default>
+        <type>string</type>
+      </argument>
+      <argument line="0" by_reference="false">
+        <name>$default_port</name>
+        <default>80</default>
+        <type>integer</type>
+      </argument>
+    </function>
+    <function namespace="amekusa\Kniphe\web" line="98" package="Default">
+      <name>session_started</name>
+      <full_name>\amekusa\Kniphe\web\session_started()</full_name>
+      <docblock line="98">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="98" description="Default"/>
+      </docblock>
+    </function>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="9" code="PPC:ERR-50015">Argument $xWithoutQueryString is missing from the Docblock of current_url</error>
+      <error line="18" code="PPC:ERR-50011">No summary for function \amekusa\Kniphe\web\current_protocol()</error>
+      <error line="35" code="PPC:ERR-50015">Argument $xName is missing from the Docblock of dom_str</error>
+      <error line="35" code="PPC:ERR-50015">Argument $xAttributes is missing from the Docblock of dom_str</error>
+      <error line="35" code="PPC:ERR-50011">No summary for function \amekusa\Kniphe\web\dom_str()</error>
+      <error line="38" code="PPC:ERR-50015">Argument $xTarget is missing from the Docblock of parse_access_log_line</error>
+      <error line="38" code="PPC:ERR-50011">No summary for function \amekusa\Kniphe\web\parse_access_log_line()</error>
+      <error line="98" code="PPC:ERR-50011">No summary for function \amekusa\Kniphe\web\session_started()</error>
+    </parse_markers>
+    <source>eJx9Vm1vE0cQ/mz/ik1kcXch9tlpoMFumqZgIGrAYF+KqticLs4ltjj7rL27OhQh9c6oBVEJigq0Kkil6gslIqlEX1QppD9ma2g/8Rc6u3ub+OKLv9h7s8/MzjM7MzvvzHUanWTbaJlOx6ibCBZXPMeoftBudhpmtWuuFJKec1CODAfphaQ6MZFEE+i01667TbvtoHweXTJX6B/H0d33PjaxA7toKpubTmdz6dw0iNVkci1UQ3UPY7Pt6h625NTGpabbsD33omfiqxUXN9vraBatGZZjKuhaMpHycBMEKb1SLH9YLC9L5eLFpWJF05fKC1KtkEw015A8FmdGQdh0PdxG1AQAwdYGWHJcjDu2I1PpJJLmJCU0Qndn946O6oZfjrcC6qFqdhKlNkD5egy1DrZdu25bMuMgtF3s2pbdNbEsDAlW4/xfv1AuaaWTpcXxGrMPGOpqMpFIjIRKqqQoSkbKq6rEHApvSiudKrE76RjYaCGvfaVtd4HUxhK2mDz0LNxg97THxVhxwisCNONBo9TB5rreMtx6Q5bUy/Kykf6kdjSvzFXVa1PXly9X1VpmQm1Kk/wQZT+Q9LMQZ6OqxqnBcXBj1yPRXbVbOgvbxnnIT4qdd+GqVzzXdKjGIBYYO6Zu1Oum4+iWva5bzbYJmpqB102XpxaGdDAwNq7KNAdSzCPTiQo7huua4P8sYnQvo9pRBQ39V5eBQ612tFpT0LicmQCR+BkHVDZ9oprmCnvLcb7J/1L03hIDcRHnUpLcZViFDio8mfGyNL+4KNXANUg5E+vca4GCBGIEMC2ZcyWtqJ8tVbQR8JyAL5bO6OfnzxVHYKcEdgmycQTuLYHTFkbamxa4c0XtbOnUCOSxfVKsD4yAHhdQUSojsG8LbEWb15YqI5AzAvn+R1pxFPDEvqeni+WRYcplB+Opz58pnh95UzmeAqK08GDNk96XJPiL+LdJcOv173/0t3eXyoskuPfPy0evbt4FxEBDcHi/pcnWCBUHdpttF6VWzTXDs6Cj2dgFyOekd58Ev5DeJundJP4W6T0mvR1Yv9mBz8eDEuL/TPyABLf73/3Wvwufm8Tfpr74m/27myTwif+M+Dfe7NwabEWhS4CjUrYDlXsFNVy3A+2t2+1moLmug38twKVbxnqznqnbLXUqm53JHp+ayeaOZaen1WgvowR11+b9jH5MHmA2i2ayCvQEVSW9WyR4Tno/kt4T0ntBiVCyO4Ivj+5TRmQrDGoitWrXvRbt/Ni22csWebMqJ8sLF7SwqApDcBb+GPzphcXink630bRMecVwTPp6y8MnKuz5OgxAz1Aow3hfV5v4MLOFYZ3Q4UOU2FEF2ryh28dtMkfpm4VQvGFJKsTpMleFaiwNqkibdvj8gmT/jZXOatoFWrBHjqBh4Ri1a6+tScockmiyOVKeLyT2DPAkGbAmnuFSWTtoM7o1NhvNNXpAXsocAs9z8vEJJXjxl37YBE+WDPM2M2yCxkZVeVMQibzVv/Ogv/sQydg0LBr+/x58/+r+r6x4t1mxPyHBD7QE/C/6z7/uP3pK/Ie8csO6Dm6QT30S/MmK5RHpPSO9Hgm22eIFXcT0gc+Iv0v8O2CENipmTQHSMHLYFrzmIg+ET7xm+aAGw14EBnqiEbLRjYPEgBWBTqJ0TuE3rUr0ygRqf1OkF835qDcZtsFDGAYvuPf65darO9+yiPz0799fEf8bNrFafM7UsdmxYMqOq4HJmAQGWZRaWAUHwgIu0jNiiO8PrVZ0LnVgCoJ/mJ4M7JqrkbF0TGw2V2U2zs69+z8FRDrR</source>
+  </file>
+  <file path="web/google/constants.php" generated-path="web.google.constants.html" hash="a243d0c68d3ff13cfa40c44bdaa011e2" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <interface namespace="amekusa\Kniphe\web\google" line="7" package="Default">
+      <name>constants</name>
+      <full_name>\amekusa\Kniphe\web\google\constants</full_name>
+      <docblock line="7">
+        <description>Constants</description>
+        <long-description></long-description>
+        <tag name="package" line="7" description="Default"/>
+      </docblock>
+      <constant namespace="amekusa\Kniphe\web\google" line="8" package="Default">
+        <name>GOOGLE_DOMAIN</name>
+        <full_name>\amekusa\Kniphe\web\google\constants::GOOGLE_DOMAIN</full_name>
+        <value>'google.com'</value>
+        <docblock line="8">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </constant>
+    </interface>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+    </parse_markers>
+    <source>eJyzsS/IKODKS8xNLS5ITE5VADKyS4sTY7zzMgsyUmPKU5Ni0vPz03NSrbm49LW0uBS0FJzz84pLEvNKioEcfa7MvJLUojSQ1mSYuEI1FyeYo+Du7+/u4xrv4u/r6OmnYKugDjFLLzk/V92aq5bL3g4A8JUptQ==</source>
+  </file>
+  <file path="web/google/functions.php" generated-path="web.google.functions.html" hash="5278a1908c6e1c9e9528f70430c05e16" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <namespace-alias name="Kn">\amekusa\Kniphe</namespace-alias>
+    <function namespace="amekusa\Kniphe\web\google" line="12" package="Default">
+      <name>local_domain</name>
+      <full_name>\amekusa\Kniphe\web\google\local_domain()</full_name>
+      <docblock line="12">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="12" description="Default"/>
+      </docblock>
+    </function>
+    <interface namespace="amekusa\Kniphe\web\google" line="8" package="Default">
+      <name>functions</name>
+      <full_name>\amekusa\Kniphe\web\google\functions</full_name>
+      <docblock line="8">
+        <description>Functions communicating with Google API</description>
+        <long-description></long-description>
+        <tag name="package" line="8" description="Default"/>
+      </docblock>
+      <constant namespace="amekusa\Kniphe\web\google" line="9" package="Default">
+        <name>required</name>
+        <full_name>\amekusa\Kniphe\web\google\functions::required</full_name>
+        <value>true</value>
+        <docblock line="9">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </constant>
+    </interface>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="12" code="PPC:ERR-50011">No summary for function \amekusa\Kniphe\web\google\local_domain()</error>
+    </parse_markers>
+    <source>eJxdjr0OgkAQhGv3KbZDKeABUImNxtD4ACTmPBY4hb3zfkJhfHcPjRZWs8nMtzPr0vQGWIzkjJCE8bgFJ+qKlempnuhSd1p3AxUQ3L+NwmHFBUCepoAp7gNLrzQ7lHocAyspvOIOJ+V7PLzf4O50xJjNQbEn286d7Q97wEJG9WjpHpSlBjfobYjlT4BvDActxXBu9CgUL1czZMkHy5h8pmZSZ1eTzFC5fQGTpUy0</source>
+  </file>
+  <file path="web/google/Map.php" generated-path="web.google.Map.html" hash="2fd87e0325e8a743cd411bec74d63f3d" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <namespace-alias name="Kn">\amekusa\Kniphe</namespace-alias>
+    <class final="false" abstract="false" namespace="amekusa\Kniphe\web\google" line="8" package="Default">
+      <extends/>
+      <name>Map</name>
+      <full_name>\amekusa\Kniphe\web\google\Map</full_name>
+      <docblock line="8">
+        <description>Google Maps</description>
+        <long-description></long-description>
+        <tag name="package" line="8" description="Default"/>
+      </docblock>
+      <property static="false" visibility="protected" namespace="amekusa\Kniphe\web\google" line="9" package="Default">
+        <name>$lat</name>
+        <full_name>\amekusa\Kniphe\web\google\Map::lat</full_name>
+        <default></default>
+        <docblock line="9">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" namespace="amekusa\Kniphe\web\google" line="9" package="Default">
+        <name>$lng</name>
+        <full_name>\amekusa\Kniphe\web\google\Map::lng</full_name>
+        <default></default>
+        <docblock line="9">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" namespace="amekusa\Kniphe\web\google" line="10" package="Default">
+        <name>$locationName</name>
+        <full_name>\amekusa\Kniphe\web\google\Map::locationName</full_name>
+        <default></default>
+        <docblock line="10">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="amekusa\Kniphe\web\google" line="12" package="Default">
+        <name>__construct</name>
+        <full_name>\amekusa\Kniphe\web\google\Map::__construct()</full_name>
+        <docblock line="12">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="amekusa\Kniphe\web\google" line="15" package="Default">
+        <name>getUrl</name>
+        <full_name>\amekusa\Kniphe\web\google\Map::getUrl()</full_name>
+        <docblock line="15">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="amekusa\Kniphe\web\google" line="34" package="Default">
+        <name>getLocationName</name>
+        <full_name>\amekusa\Kniphe\web\google\Map::getLocationName()</full_name>
+        <docblock line="34">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="amekusa\Kniphe\web\google" line="38" package="Default">
+        <name>setPos</name>
+        <full_name>\amekusa\Kniphe\web\google\Map::setPos()</full_name>
+        <docblock line="38">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$xLat</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$xLng</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="amekusa\Kniphe\web\google" line="44" package="Default">
+        <name>setLocationName</name>
+        <full_name>\amekusa\Kniphe\web\google\Map::setLocationName()</full_name>
+        <docblock line="44">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$xName</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="12" code="PPC:ERR-50008">No summary for method __construct()</error>
+      <error line="15" code="PPC:ERR-50008">No summary for method getUrl()</error>
+      <error line="34" code="PPC:ERR-50008">No summary for method getLocationName()</error>
+      <error line="38" code="PPC:ERR-50015">Argument $xLat is missing from the Docblock of setPos</error>
+      <error line="38" code="PPC:ERR-50015">Argument $xLng is missing from the Docblock of setPos</error>
+      <error line="38" code="PPC:ERR-50008">No summary for method setPos()</error>
+      <error line="44" code="PPC:ERR-50015">Argument $xName is missing from the Docblock of setLocationName</error>
+      <error line="44" code="PPC:ERR-50008">No summary for method setLocationName()</error>
+      <error line="9" code="PPC:ERR-50007">No summary for property $lat</error>
+      <error line="9" code="PPC:ERR-50007">No summary for property $lng</error>
+      <error line="10" code="PPC:ERR-50007">No summary for property $locationName</error>
+    </parse_markers>
+    <source>eJx1UsFygjAUPMtXPB1GwLF4L60ee9B2eumpdpwYI9JiCEmY6ij/3peABR28MGR3s/veTp5mYiccTvZMCUIZ4M9PochyzhOxY8tftl7GWRanLHIKdUsDUTDnkeNMRiMHRvBilfBKhMLjxKEpUcoc4eT0hMw0o5ptwE2JHuOXx9E1nFGik4y/YQoyyBXrNKGwLTg1OKxWNONKy4JqPzCeZZcqZvpDppWg50p4Bm+ntVCPk8keJwurfUKahd/CIh6G9YxWEEn2Ci8QKckR/KAmki34iVJM+67eJephigsEMBzCNcjjoAq9OH16aep9od/g1Fwsx6fmQjkwEWUTc6FaVdx65tayQ9iycnOUmK1X6yJJN6u8YPLo1xZ2LRuWB4AFhdjQzIMQ3LxeWDJdSI5cdL/jRSu5LvtyrXO0Th+s7z1TvntY2CdxWGCH1sqM17cwnM/Qr5kqwAzZ9Gm6MLo2yuMKtS/sXvDVAu6hqbpjfmv3v0jpzKZ/3+/7Yg==</source>
+  </file>
+  <file path="xml/functions.php" generated-path="xml.functions.html" hash="394c35621d216655859cd9dd3334cb7c" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <function namespace="amekusa\Kniphe\xml" line="17" package="Default">
+      <name>xml_str</name>
+      <full_name>\amekusa\Kniphe\xml\xml_str()</full_name>
+      <docblock line="17">
+        <description>#DEPRECATED</description>
+        <long-description></long-description>
+        <tag name="package" line="17" description="Default"/>
+        <tag name="param" line="17" description="" type="\amekusa\Kniphe\xml\unknown" variable="$xElemName">
+          <type>\amekusa\Kniphe\xml\unknown</type>
+        </tag>
+        <tag name="param" line="17" description="" type="string" variable="$xContent">
+          <type>string</type>
+        </tag>
+        <tag name="param" line="17" description="" type="array" variable="$xAttrNames">
+          <type>array</type>
+        </tag>
+        <tag name="param" line="17" description="" type="array" variable="$xAttrValues">
+          <type>array</type>
+        </tag>
+        <tag name="throws" line="17" description="" type="\amekusa\Kniphe\xml\IllegalArgumentException">
+          <type>\amekusa\Kniphe\xml\IllegalArgumentException</type>
+        </tag>
+        <tag name="return" line="17" description="" type="string">
+          <type>string</type>
+        </tag>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$xElemName</name>
+        <default></default>
+        <type>\amekusa\Kniphe\xml\unknown</type>
+      </argument>
+      <argument line="0" by_reference="false">
+        <name>$xContent</name>
+        <default>null</default>
+        <type>string</type>
+      </argument>
+      <argument line="0" by_reference="false">
+        <name>$xAttrNames</name>
+        <default>null</default>
+        <type>array</type>
+      </argument>
+      <argument line="0" by_reference="false">
+        <name>$xAttrValues</name>
+        <default>null</default>
+        <type>array</type>
+      </argument>
+    </function>
+    <function namespace="amekusa\Kniphe\xml" line="53" package="Default">
+      <name>parse_xml_attributes</name>
+      <full_name>\amekusa\Kniphe\xml\parse_xml_attributes()</full_name>
+      <docblock line="53">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="53" description="Default"/>
+        <tag name="param" line="53" description="" type="\amekusa\Kniphe\xml\unknown" variable="$xAttributes">
+          <type>\amekusa\Kniphe\xml\unknown</type>
+        </tag>
+        <tag name="return" line="53" description="attribute/value sets&#10;array ('attributeN' =&gt; valueN,...)" type="array">
+          <type>array</type>
+        </tag>
+        <tag name="author" line="53" description="amekusa"/>
+        <tag name="version" line="53" description="2013-11-12"/>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$xAttributes</name>
+        <default></default>
+        <type>\amekusa\Kniphe\xml\unknown</type>
+      </argument>
+    </function>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="53" code="PPC:ERR-50011">No summary for function \amekusa\Kniphe\xml\parse_xml_attributes()</error>
+    </parse_markers>
+    <source>eJztVF1vmzAUfQ6/4jZDMqQBQva0NB+L2kyaukXTNE3TEobcyE1QwUG26ce2/vddGwJUUdeHvS6KBNxzfe7xPdcez/JdbnGaMZnTDQN8uSkkXV/yJN+x9X2WnllBr2dBD94VfKOSPZcwGsG3jx/0o0zT6NtbJiSiMByEr70w9MIhhgPrsPrVxeLT58X5/MviwqTnVNAMCn7D93cc7PtFyrIlVm+BUomEbxE733PFuGpBVAj6gMhcKaFXyWewrzQtKlDtxP5Owvs0ZVuazsW2yJBzcb9hud6VyRFMFYJXhY3862rTgJ2IMe40SvuNMpgAL9K0f6zrgFidzrGuCnThl9WxBX6RMfGbAmdWJ7kG54RluXpwWqSuWdGxeZHpmObZ7AuunuTgarO8yTqZPM0rRSCZaQ1wdvdsdxxDd70XyJdgucEZ4HMMNbn+Pj0tdem9+LgZ0JupBa3sJPLJpHsIltXLaJdo+kdL/ysPbOE7iYx1f5y6zy7MkDaYEhgBmWqmCvDJOGi3zkcUJT/q8XvJQy0muSpUY9aRsS845P436p+Nal0VR3dD41D7lJbniR6w4FbrBMmUySpRh9T4ksBkCiZp2fd939VZho8WaocNq66+v11m9SShQsliPU81v3TaQpuJqYRoXzCSUbXZmUlrxXPBtrFBYopdJMFanjor6v2ce99HcVS9Dbw3Iz/2op47cbp+b7b6scZf1P29Js3XmrgB6bcsLeXgSFeVSx04IIxudjgkVXgVRkAljskle9B9snk1umJl8wjlyuLKHJ1D/jBameSoD2EfvFDzPmrqeiy0q7PpH13e8L4=</source>
+  </file>
+  <package name="Default" full_name="Default"/>
+  <package name="global" full_name="global"/>
+  <namespace name="global" full_name="global"/>
+  <namespace name="amekusa" full_name="amekusa">
+    <namespace name="Kniphe" full_name="amekusa\Kniphe">
+      <namespace name="collection" full_name="amekusa\Kniphe\collection"/>
+      <namespace name="math" full_name="amekusa\Kniphe\math"/>
+      <namespace name="scratch" full_name="amekusa\Kniphe\scratch"/>
+      <namespace name="web" full_name="amekusa\Kniphe\web">
+        <namespace name="google" full_name="amekusa\Kniphe\web\google"/>
+      </namespace>
+      <namespace name="xml" full_name="amekusa\Kniphe\xml"/>
+    </namespace>
+  </namespace>
+  <deprecated count="0"/>
+</project>
