@@ -3,32 +3,30 @@ namespace amekusa\Kniphe;
 
 /**
  * Functions
- * 
- * @author amekusa <post@amekusa.com>
  */
 interface functions {
 	const required = true;
 }
 
 /**
- * Verify whether a specific PHP directive has a specific value.
+ * Verifies whether a directive has the specific value.
  *
- * @param string $xName Name of PHP directive
- * @param mixed $xValue Value of PHP directive
+ * @param string $xName The name of the directive
+ * @param mixed $xValue The value of the directive
  */
 function verify_ini($xName, $xValue) {
 	$x = ini_get($xName);
 	if ($x === false) new \Exception("No such directive:$xName");
 	if ($x !== '' && $x === $xValue) return;
-	if (ini_set($xName, $xValue) === false) new \Exception("Value of the directive:$xName must be $xValue");
+	if (ini_set($xName, $xValue) === false) new \Exception("The value of the directive:$xName must be $xValue");
 }
 
 /**
- * Returns the type of a specific value.
- * If the value is object, returns the class name of the object.
+ * Returns the type of a value.
+ * If the value is an object, returns the class name of the object.
  *
  * @param mixed $xValue
- * @return string
+ * @return string The type representation
  */
 function type($xValue) {
 	if (is_object($xValue)) return get_class($xValue);
@@ -42,10 +40,10 @@ function type($xValue) {
 }
 
 /**
- * Returns whether the type of a specific value matches a specific type or not.
+ * Returns whether the type of a value matches a specific type.
  *
  * @param mixed $xValue
- * @param string $xType
+ * @param string $xType The matching type representation
  * @return boolean
  */
 function type_matches($xValue, $xType) {
@@ -56,22 +54,28 @@ function type_matches($xValue, $xType) {
 	if ($xType === 'array') return is_array($xValue);
 	if ($xType === 'object') return is_object($xValue);
 	if ($xType === 'resource') return is_resource($xValue);
-	
+
 	if ($xType === 'mixed') return true;
 	if ($xType === 'numeric') return is_numeric($xValue);
 	if ($xType === 'callable') return is_callable($xValue);
 	if ($xType === 'scalar') return is_scalar($xValue);
 	if ($xType === 'vector') return !is_scalar($xValue);
-	
+
 	if ($xType === 'long') return is_long($xValue);
 	if ($xType === 'double') return is_double($xValue);
 	if ($xType === 'real') return is_real($xValue);
-	
+
 	if (class_exists($xType)) return $xValue instanceof $xType;
-	
+
 	return $xType === gettype($xValue);
 }
 
+/**
+ * Returns whether a value is an array or an array like object.
+ *
+ * @param mixed $xValue
+ * @return boolean
+ */
 function array_like($xValue) {
 	if (is_array($xValue)) return true;
 	if (is_object($xValue)) {
@@ -80,6 +84,12 @@ function array_like($xValue) {
 	return false;
 }
 
+/**
+ * Returns whether a value is iterable.
+ *
+ * @param mixed $xValue
+ * @return boolean
+ */
 function iterable($xValue) {
 	if (is_array($xValue)) return true;
 	if (is_object($xValue)) {
@@ -88,12 +98,21 @@ function iterable($xValue) {
 	return false;
 }
 
+/**
+ * Interprets a value as a boolean.
+ *
+ * @param mixed $xValue
+ * @return boolean
+ */
 function bool($xValue) {
 	if (is_bool($xValue)) return $xValue;
 	if (is_string($xValue)) return strings_are_equal($xValue, 'true', true);
 	return (bool) $xValue;
 }
 
+/**
+ * @see bool() Alias
+ */
 function boolean($xValue) {
 	return bool($xValue);
 }
@@ -110,11 +129,11 @@ function integer($xValue) {
 function str($xValue) {
 	if (is_string($xValue)) return $xValue;
 	if (is_array($xValue)) return '';
-	
+
 	if (is_object($xValue)) {
 		if (!is_callable(array ($xValue, '__toString'))) return '';
 	}
-	
+
 	return (string) $xValue;
 }
 
@@ -208,21 +227,20 @@ function arrays_are_equal(array $xArrayX, array $xArrayY) {
 
 /**
  * #UNTESTED
- * 
+ *
  * @param mixed $xArgs
  * @return array
  */
 function flat_array($xArgs) {
 	$r = array ();
-	
-	$args = (func_num_args() > 1) ? func_get_args() : (is_array($xArgs)) ? $xArgs : array (
-			$xArgs);
-	
+
+	$args = (func_num_args() > 1) ? func_get_args() : (is_array($xArgs)) ? $xArgs : array ($xArgs);
+
 	foreach ($args as $iArg) {
 		if (is_array($iArg)) $r = array_merge($r, flat_array($iArg));
 		else $r[] = $iArg;
 	}
-	
+
 	return $r;
 }
 
@@ -239,14 +257,13 @@ function get($xName, $xFrom, $xAltValue = null) {
 		$x = array ($xFrom, 'get' . ucfirst($xName));
 		if (is_callable($x)) return call_user_func($x);
 		else $vars = get_object_vars($xFrom);
-	
 	} else if (array_like($xFrom)) $vars = $xFrom;
 	else return $xAltValue;
-	
+
 	return enter_array($vars, $xName, $xAltValue);
 }
 
-function string_is_nonsense($xString){
+function string_is_nonsense($xString) {
 	return !$xString || ctype_space($xString);
 }
 
@@ -261,7 +278,7 @@ function strings_are_equal($xStringX, $xStringY, $xCaseInsensitive = false) {
 
 /**
  * Checks whether $xSbjStr contains $xObjStr or not.
- * 
+ *
  * @param string $xSbjStr
  * @param string $xObjStr
  * @param boolean $xCaseInsensitive
@@ -280,7 +297,7 @@ function repeat_string($xString, $xRepetition = 1) {
 
 /**
  * Gets the extention from a file path.
- * 
+ *
  * @param $xPath
  * @return
  *
@@ -294,13 +311,13 @@ function ordinal_number($xNumber, $xWithSupTag = false) {
 	if (abs($xNumber) % 100 < 21 && abs($xNumber) % 100 > 4) $suffix = 'th';
 	else {
 		switch ($xNumber % 10) {
-			case 1:
+			case 1 :
 				$suffix = 'st';
 				break;
-			case 2:
+			case 2 :
 				$suffix = 'nd';
 				break;
-			case 3:
+			case 3 :
 				$suffix = 'rd';
 				break;
 		}
@@ -313,16 +330,16 @@ function on_shutdown() {
 	$lastError = error_get_last();
 	if (isset($lastError)) {
 		switch ($lastError['type']) {
-			case E_ERROR:
-			case E_PARSE:
-			case E_CORE_ERROR:
-			case E_CORE_WARNING:
-			case E_COMPILE_ERROR:
-			case E_COMPILE_WARNING:
-				
+			case E_ERROR :
+			case E_PARSE :
+			case E_CORE_ERROR :
+			case E_CORE_WARNING :
+			case E_COMPILE_ERROR :
+			case E_COMPILE_WARNING :
+
 				// これらのエラー (Fatal error など) は自動的にエラーハンドラに渡されないので、ここで渡す
 				echo 'Unhandled Error'; // TESTCODE
-				//handle_error($lastError['type'], $lastError['message'], $lastError['file'], $lastError['line']);
+				// handle_error($lastError['type'], $lastError['message'], $lastError['file'], $lastError['line']);
 				handle_exception(new ErrorException($lastError['message'], 0, $lastError['type'], $lastError['file'], $lastError['line']));
 		}
 	}
@@ -330,25 +347,25 @@ function on_shutdown() {
 
 function handle_error($xErrorNo, $xErrorMsg, $xErroredFile, $xErroredLine) { // INPROGRESS
 	switch ($xErrorNo) {
-		case E_ERROR:
-		case E_USER_ERROR:
+		case E_ERROR :
+		case E_USER_ERROR :
 			echo 'Critical error handled'; // TESTCODE
-		//handle_exception(new CriticalErrorException($xErrorMsg, 0, $xErrorNo, $xErroredFile, $xErroredLine));
-		//throw new CriticalErrorException($xErrorMsg, 0, $xErrorNo, $xErroredFile, $xErroredLine));
+		// handle_exception(new CriticalErrorException($xErrorMsg, 0, $xErrorNo, $xErroredFile, $xErroredLine));
+		// throw new CriticalErrorException($xErrorMsg, 0, $xErrorNo, $xErroredFile, $xErroredLine));
 	}
 	throw new \ErrorException($xErrorMsg, 0, $xErrorNo, $xErroredFile, $xErroredLine);
 }
 
 function buf($xCallback = null, $xForcesPush = false) {
 	static $buffers = array ();
-	
+
 	if (is_null($xCallback)) return array_pop($buffers);
-	
+
 	ob_start();
 	invoke($xCallback);
 	$r = ob_get_clean();
 	if ($xForcesPush || !empty($r)) $buffers[] = $r;
-	
+
 	return $r;
 }
 
@@ -366,7 +383,7 @@ function invoke($xCallback) {
 
 function template($xTemplate, $xVariables) {
 	$r = xTemplate;
-	
+
 	return $r;
 }
 

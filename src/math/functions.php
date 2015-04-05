@@ -1,10 +1,12 @@
 <?php
 namespace amekusa\Kniphe\math;
+
 /**
- * Functions :: Math :: Kniphe
- * @since 2013-09-25
- * @version 2013-09-25
+ * Math Functions
  */
+interface functions {
+	const required = true;
+}
 
 function range($xValue, $xMinValue, $xMaxValue) {
 	if ($xValue < $xMinValue) return $xMinValue;
@@ -12,15 +14,14 @@ function range($xValue, $xMinValue, $xMaxValue) {
 	return $xValue;
 }
 
-function average($xNums) {
+function mean($xNums) {
 	return array_sum(flat_array(func_get_args())) / count($xNums);
 }
 
-function is_odd($xN) {
+function odd($xN) {
 	return ($xN % 2) != 0;
 }
 
-function is_even($xN) {
+function even($xN) {
 	return ($xN % 2) == 0;
 }
-?>
