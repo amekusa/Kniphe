@@ -1,5 +1,4 @@
-<?php
-namespace amekusa\Kniphe;
+<?php namespace amekusa\Kniphe;
 
 class FtpIOException extends IOException {
 	
@@ -7,4 +6,3 @@ class FtpIOException extends IOException {
 		return ftp_close($this->stream);
 	}
 }
-?>

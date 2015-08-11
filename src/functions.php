@@ -1,5 +1,4 @@
-<?php
-namespace amekusa\Kniphe;
+<?php namespace amekusa\Kniphe;
 
 /**
  * Functions
@@ -380,25 +379,3 @@ function invoke($xCallback) {
 		return eval(substr($xCallback, -1) == ';' ? $xCallback : ($xCallback . ';'));
 	}
 }
-
-function template($xTemplate, $xVariables) {
-	$r = xTemplate;
-
-	return $r;
-}
-
-/*
- * #WIP
- * function parse_args($xArgs, $xValueDelimiter = ',') {
- * $r = array ();
- * if (is_array($xArgs)) {
- * foreach ($xArgs as $nKey => $n) {
- * $r[$nKey] = parse_args
- * }
- * } else if (is_string($xArgs)) {
- * parse_str($xArgs, $r);
- * }
- * return $r;
- * }
- */
-?>

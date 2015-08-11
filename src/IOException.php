@@ -1,5 +1,4 @@
-<?php
-namespace amekusa\Kniphe;
+<?php namespace amekusa\Kniphe;
 
 abstract class IOException extends \RuntimeException {
 	public $stream = null;
@@ -11,4 +10,3 @@ abstract class IOException extends \RuntimeException {
 	
 	protected abstract function _closeStream();
 }
-?>

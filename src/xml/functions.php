@@ -1,8 +1,7 @@
-<?php
-namespace amekusa\Kniphe\xml;
+<?php namespace amekusa\Kniphe\xml;
+
 /**
  * Functions :: XML :: Kniphe
- * @version 2013-11-12
  */
 
 /**
@@ -62,4 +61,3 @@ function parse_xml_attributes($xAttributes) {
 	
 	return $r;
 }
-?>

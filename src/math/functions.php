@@ -1,5 +1,4 @@
-<?php
-namespace amekusa\Kniphe\math;
+<?php namespace amekusa\Kniphe\math;
 
 /**
  * Math Functions

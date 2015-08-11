@@ -1,5 +1,3 @@
-<?php
-namespace amekusa\Kniphe;
+<?php namespace amekusa\Kniphe;
 
 functions::required;
-?>

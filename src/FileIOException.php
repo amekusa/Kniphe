@@ -1,5 +1,4 @@
-<?php
-namespace amekusa\Kniphe;
+<?php namespace amekusa\Kniphe;
 
 class FileIOException extends IOException {
 	
@@ -7,4 +6,3 @@ class FileIOException extends IOException {
 		return fclose($this->stream);
 	}
 }
-?>

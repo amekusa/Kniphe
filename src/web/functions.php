@@ -1,6 +1,7 @@
-<?php
-namespace amekusa\Kniphe\web;
-use amekusa\Kniphe as _;
+<?php namespace amekusa\Kniphe\web;
+
+use amekusa\Kniphe as Kn;
+
 /**
  * Functions :: Web :: Kniphe
  * @version 2014-01-14
@@ -98,4 +99,3 @@ function path_to_url($path, $default_port = 80){
 function session_started() {
 	return !session_id();
 }
-?>
