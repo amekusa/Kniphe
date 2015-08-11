@@ -1,13 +1,18 @@
 {
-	"name" : "amekusa/Kniphe",
+	"name" : "amekusa/kniphe",
+	"description" : "A collection of elegant functions and classes for various situations of development",
 	"version" : "0.1.0",
-	"authors" : [{
+	"authors" : [
+		{
 			"name" : "amekusa",
 			"email" : "post@amekusa.com"
 		}
 	],
 	"require" : {
 		"php" : ">=5.3.3"
+	},
+	"require-dev" : {
+		"phpdocumentor/phpdocumentor" : "^2.8"
 	},
 	"autoload" : {
 		"psr-4" : {
